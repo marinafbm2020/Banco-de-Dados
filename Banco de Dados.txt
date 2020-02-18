@@ -1,0 +1,1784 @@
+
+Setting environment for using XAMPP for Windows.
+Treinamento@RD723913 c:\xampp
+# cd ..
+
+Treinamento@RD723913 c:\
+# cd .\Documentos\
+O sistema não pode encontrar o caminho especificado.
+
+Treinamento@RD723913 c:\
+# cd .\Users\Treinamento\
+
+Treinamento@RD723913 c:\Users\Treinamento
+# ls
+'ls' não é reconhecido como um comando interno
+ou externo, um programa operável ou um arquivo em lotes.
+
+Treinamento@RD723913 c:\Users\Treinamento
+# cd .\Documentos\
+O sistema não pode encontrar o caminho especificado.
+
+Treinamento@RD723913 c:\Users\Treinamento
+# cd .\Documents\
+
+Treinamento@RD723913 c:\Users\Treinamento\Documents
+# cd .\Exercicio Banco de Dados\
+
+Treinamento@RD723913 c:\Users\Treinamento\Documents\Exercicio Banco de Dados
+# mysql -u root -p
+Enter password:
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 10
+Server version: 10.4.11-MariaDB mariadb.org binary distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> source osmaker.sql
+Query OK, 6 rows affected (0.102 sec)
+
+Query OK, 1 row affected (0.002 sec)
+
+Database changed
+Query OK, 0 rows affected (0.014 sec)
+
+Query OK, 0 rows affected (0.012 sec)
+
+Query OK, 0 rows affected (0.011 sec)
+
+Query OK, 0 rows affected (0.012 sec)
+
+Query OK, 0 rows affected (0.012 sec)
+
+Query OK, 0 rows affected (0.012 sec)
+
+Query OK, 5 rows affected (0.009 sec)
+Records: 5  Duplicates: 0  Warnings: 0
+
+Query OK, 32 rows affected (0.003 sec)
+Records: 32  Duplicates: 0  Warnings: 0
+
+Query OK, 4 rows affected (0.007 sec)
+Records: 4  Duplicates: 0  Warnings: 0
+
+Query OK, 25 rows affected (0.005 sec)
+Records: 25  Duplicates: 0  Warnings: 0
+
+Query OK, 50 rows affected (0.006 sec)
+Records: 50  Duplicates: 0  Warnings: 0
+
+Query OK, 47 rows affected (0.004 sec)
+Records: 47  Duplicates: 0  Warnings: 0
+
+MariaDB [osmakers]> select * from funcionarios;
++----+---------------------+-----------+
+| id | nome                | id_equipe |
++----+---------------------+-----------+
+|  1 | Mariana Alves       |         1 |
+|  2 | Mariana Andressa    |         1 |
+|  3 | Beatriz Beatriz     |         1 |
+|  4 | Rony Candeli        |         1 |
+|  5 | Ana Carolina        |         1 |
+|  6 | Caroline Caroline   |         1 |
+|  7 | Teresa Cristina     |         2 |
+|  8 | Marcelo Da Mata     |         2 |
+|  9 | Tatiana De Oliveira |         2 |
+| 10 | Lucas Ferrari       |         2 |
+| 11 | Leslie Gamarra      |         2 |
+| 12 | Nkuansambo Justem   |         3 |
+| 13 | Marion Jutglar      |         3 |
+| 14 | Laura Laura         |         3 |
+| 15 | Eloir Magalh├úes     |         3 |
+| 16 | Amanda Martins      |         3 |
+| 17 | Wilson Mateus       |         3 |
+| 18 | Megumi Miyata       |         3 |
+| 19 | Wilson Morais       |         4 |
+| 20 | Angela M            |         4 |
+| 21 | Domingos Mussumar   |         4 |
+| 22 | Debora Orsolon      |         4 |
+| 23 | Cristiane Reis      |         4 |
+| 24 | Guilherme Rodrigues |         4 |
+| 25 | Silvana Sales       |         4 |
+| 26 | Ta├¡sa Salton        |         5 |
+| 27 | Aline Soares        |         5 |
+| 28 | Alaercio Vieira     |         5 |
+| 29 | Roseane Yumi        |         5 |
+| 30 | Angelica Zanetti    |         5 |
+| 31 | Felgueiras Zeferino |         5 |
+| 32 | Megumi              |         5 |
++----+---------------------+-----------+
+32 rows in set (0.001 sec)
+
+MariaDB [osmakers]> select nome from funcionarios;
++---------------------+
+| nome                |
++---------------------+
+| Mariana Alves       |
+| Mariana Andressa    |
+| Beatriz Beatriz     |
+| Rony Candeli        |
+| Ana Carolina        |
+| Caroline Caroline   |
+| Teresa Cristina     |
+| Marcelo Da Mata     |
+| Tatiana De Oliveira |
+| Lucas Ferrari       |
+| Leslie Gamarra      |
+| Nkuansambo Justem   |
+| Marion Jutglar      |
+| Laura Laura         |
+| Eloir Magalh├úes     |
+| Amanda Martins      |
+| Wilson Mateus       |
+| Megumi Miyata       |
+| Wilson Morais       |
+| Angela M            |
+| Domingos Mussumar   |
+| Debora Orsolon      |
+| Cristiane Reis      |
+| Guilherme Rodrigues |
+| Silvana Sales       |
+| Ta├¡sa Salton        |
+| Aline Soares        |
+| Alaercio Vieira     |
+| Roseane Yumi        |
+| Angelica Zanetti    |
+| Felgueiras Zeferino |
+| Megumi              |
++---------------------+
+32 rows in set (0.001 sec)
+
+MariaDB [osmakers]> select nome from funcionarios where id_equipe=5;
++---------------------+
+| nome                |
++---------------------+
+| Ta├¡sa Salton        |
+| Aline Soares        |
+| Alaercio Vieira     |
+| Roseane Yumi        |
+| Angelica Zanetti    |
+| Felgueiras Zeferino |
+| Megumi              |
++---------------------+
+7 rows in set (0.001 sec)
+
+MariaDB [osmakers]> select nome from oss;
+ERROR 1054 (42S22): Unknown column 'nome' in 'field list'
+MariaDB [osmakers]> select * from oss where id=1;
++----+------------------------------+-----------+---------+--------------+--------------+----------+------------+
+| id | endereco                     | id_bairro | id_tipo | duracao_prev | duracao_real | valor    | data       |
++----+------------------------------+-----------+---------+--------------+--------------+----------+------------+
+|  1 | Rua Maximiliano Weinlich, 34 |         1 |       1 |          120 |          100 | 15000.00 | 2019-11-17 |
++----+------------------------------+-----------+---------+--------------+--------------+----------+------------+
+1 row in set (0.001 sec)
+
+MariaDB [osmakers]> select id,endereco from oss;
++----+-----------------------------------------------------------+
+| id | endereco                                                  |
++----+-----------------------------------------------------------+
+|  1 | Rua Maximiliano Weinlich, 34                              |
+|  2 | Rua Nilo Rezende Rubim, 35                                |
+|  3 | Avenida das Amoreiras, 5300                               |
+|  4 | Avenida das Amoreiras, 4990                               |
+|  5 | Rua Doutor Israel Martins, 45                             |
+|  6 | Rua Mineiros do Tiete, 635                                |
+|  7 | Rua General Lauro Sodre, 514                              |
+|  8 | Rua Itatiba, 513                                          |
+|  9 | Rua Laranjal Paulista, 766                                |
+| 10 | Rua Arlindo Lucio da Silva, 125                           |
+| 11 | Rua Professora Amalia de Arruda L Martini, 621            |
+| 12 | Rua Rodolfo Ribeiro, 156                                  |
+| 13 | Avenida Francisco Glicerio, 1058                          |
+| 14 | Rua Celso de Barros, 213                                  |
+| 15 | Avenida da Saudade, 869                                   |
+| 16 | Rua Professora Nadir Leite do Canto, 40                   |
+| 17 | Rua Jose Ferreira da Silva, 385                           |
+| 18 | Rua Cristovao Bonini, 597                                 |
+| 19 | Rua Gentil Ribeiro, 54                                    |
+| 20 | Rua Mario Bassani, 206                                    |
+| 21 | Rua Virginia Fontes da Silva Padilha, 35                  |
+| 22 | Rua Sarah Kubitschek de Oliveira, 87                      |
+| 23 | Rua Antonio Luchiari, 499                                 |
+| 24 | Rua Antonio Fernando Von Ah, 176                          |
+| 25 | Rua Apostal Sotir Tako, 35                                |
+| 26 | Rua Rogerio Garcia Sanches, 488                           |
+| 27 | Rua Anair Caetano Goncalves, 608                          |
+| 28 | Rua Manoella Marcolino da Silva Derigo, 65                |
+| 29 | Rua Onze, 609                                             |
+| 30 | Rua Cacilda Becker, 0 / Rua Zulmira de Souza Rodrigues, 0 |
+| 31 | Rua Urupes, 75                                            |
+| 32 | Rua Jose Gomes Oliveira Filho, 173                        |
+| 33 | Rua Itaocara, 31                                          |
+| 34 | Rua Antonio Baracat, 36                                   |
+| 35 | Avenida Marginal, 584                                     |
+| 36 | Rua Roberto Antonio Manfredini Filho, 328                 |
+| 37 | Rua Professora Carolina de Oliveira, 5                    |
+| 38 | Avenida John Boyd Dunlop, 12500                           |
+| 39 | Rua Romeu Marinelli, 780                                  |
+| 40 | Rua Fernando Padua Castro Mundt, 517                      |
+| 41 | Rua Rene Verinaud, 512                                    |
+| 42 | Rua Rene Verinaud, 530                                    |
+| 43 | Rua Expedicionario Horacio Carlos Teixeira, 25            |
+| 44 | Rua Guilherme Fragoso Ferrao, 112                         |
+| 45 | Rua Celso Soares Couto, 366                               |
+| 46 | Rua General Carlos Coari Iracema Gomes, 202               |
+| 47 | Rua Rio Capivari, 72                                      |
+| 48 | Rua Expedicionario Horacio Carlos Teixeira, 33            |
+| 49 | Rua Expedicionario Horacio CArlos Teixeira, 41            |
+| 50 | Rua Osvaldo Gallerani, 494                                |
++----+-----------------------------------------------------------+
+50 rows in set (0.001 sec)
+
+MariaDB [osmakers]> select id,endereco from oss where data = "2019-11/17;
+    "> select id,endereco from oss where data = "2019-11/17";
+    "> ;
+    ">
+    "> select id,endereco from oss where data = "2019-11/17";
+    ">
+    "> select id,endereco from oss where data = "2019-11/17"
+    "> select id,endereco from oss where data = "2019-11/17";
+    "> select id,endereco from oss where data = "2019-11-17";
+    "> ;
+    "> ;;
+    ">
+    "> ;
+    "> select id,endereco from oss where data = "2019-11-17";"
+    -> select id,endereco from oss where data = "2019-11-17";";
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '2019-11/17";
+;
+
+select id,endereco from oss where data = "2019-11/17";
+
+select i' at line 1
+    "> ;
+    "> Bye
+
+Treinamento@RD723913 c:\Users\Treinamento\Documents\Exercicio Banco de Dados
+# mysql -u root -p
+Enter password:
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 11
+Server version: 10.4.11-MariaDB mariadb.org binary distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> use osmakers
+Database changed
+MariaDB [osmakers]> select * from funcionarios;
++----+---------------------+-----------+
+| id | nome                | id_equipe |
++----+---------------------+-----------+
+|  1 | Mariana Alves       |         1 |
+|  2 | Mariana Andressa    |         1 |
+|  3 | Beatriz Beatriz     |         1 |
+|  4 | Rony Candeli        |         1 |
+|  5 | Ana Carolina        |         1 |
+|  6 | Caroline Caroline   |         1 |
+|  7 | Teresa Cristina     |         2 |
+|  8 | Marcelo Da Mata     |         2 |
+|  9 | Tatiana De Oliveira |         2 |
+| 10 | Lucas Ferrari       |         2 |
+| 11 | Leslie Gamarra      |         2 |
+| 12 | Nkuansambo Justem   |         3 |
+| 13 | Marion Jutglar      |         3 |
+| 14 | Laura Laura         |         3 |
+| 15 | Eloir Magalh├úes     |         3 |
+| 16 | Amanda Martins      |         3 |
+| 17 | Wilson Mateus       |         3 |
+| 18 | Megumi Miyata       |         3 |
+| 19 | Wilson Morais       |         4 |
+| 20 | Angela M            |         4 |
+| 21 | Domingos Mussumar   |         4 |
+| 22 | Debora Orsolon      |         4 |
+| 23 | Cristiane Reis      |         4 |
+| 24 | Guilherme Rodrigues |         4 |
+| 25 | Silvana Sales       |         4 |
+| 26 | Ta├¡sa Salton        |         5 |
+| 27 | Aline Soares        |         5 |
+| 28 | Alaercio Vieira     |         5 |
+| 29 | Roseane Yumi        |         5 |
+| 30 | Angelica Zanetti    |         5 |
+| 31 | Felgueiras Zeferino |         5 |
+| 32 | Megumi              |         5 |
++----+---------------------+-----------+
+32 rows in set (0.001 sec)
+
+MariaDB [osmakers]> select nome from funcionarios;
++---------------------+
+| nome                |
++---------------------+
+| Mariana Alves       |
+| Mariana Andressa    |
+| Beatriz Beatriz     |
+| Rony Candeli        |
+| Ana Carolina        |
+| Caroline Caroline   |
+| Teresa Cristina     |
+| Marcelo Da Mata     |
+| Tatiana De Oliveira |
+| Lucas Ferrari       |
+| Leslie Gamarra      |
+| Nkuansambo Justem   |
+| Marion Jutglar      |
+| Laura Laura         |
+| Eloir Magalh├úes     |
+| Amanda Martins      |
+| Wilson Mateus       |
+| Megumi Miyata       |
+| Wilson Morais       |
+| Angela M            |
+| Domingos Mussumar   |
+| Debora Orsolon      |
+| Cristiane Reis      |
+| Guilherme Rodrigues |
+| Silvana Sales       |
+| Ta├¡sa Salton        |
+| Aline Soares        |
+| Alaercio Vieira     |
+| Roseane Yumi        |
+| Angelica Zanetti    |
+| Felgueiras Zeferino |
+| Megumi              |
++---------------------+
+32 rows in set (0.000 sec)
+
+MariaDB [osmakers]> select nome from funcionarios where id_equipes=5;
+ERROR 1054 (42S22): Unknown column 'id_equipes' in 'where clause'
+MariaDB [osmakers]> select nome from funcionarios where id_equipe=5;
++---------------------+
+| nome                |
++---------------------+
+| Ta├¡sa Salton        |
+| Aline Soares        |
+| Alaercio Vieira     |
+| Roseane Yumi        |
+| Angelica Zanetti    |
+| Felgueiras Zeferino |
+| Megumi              |
++---------------------+
+7 rows in set (0.000 sec)
+
+MariaDB [osmakers]> select * from oss where id=1;
++----+------------------------------+-----------+---------+--------------+--------------+----------+------------+
+| id | endereco                     | id_bairro | id_tipo | duracao_prev | duracao_real | valor    | data       |
++----+------------------------------+-----------+---------+--------------+--------------+----------+------------+
+|  1 | Rua Maximiliano Weinlich, 34 |         1 |       1 |          120 |          100 | 15000.00 | 2019-11-17 |
++----+------------------------------+-----------+---------+--------------+--------------+----------+------------+
+1 row in set (0.000 sec)
+
+MariaDB [osmakers]> select id,endereco from oss ;
++----+-----------------------------------------------------------+
+| id | endereco                                                  |
++----+-----------------------------------------------------------+
+|  1 | Rua Maximiliano Weinlich, 34                              |
+|  2 | Rua Nilo Rezende Rubim, 35                                |
+|  3 | Avenida das Amoreiras, 5300                               |
+|  4 | Avenida das Amoreiras, 4990                               |
+|  5 | Rua Doutor Israel Martins, 45                             |
+|  6 | Rua Mineiros do Tiete, 635                                |
+|  7 | Rua General Lauro Sodre, 514                              |
+|  8 | Rua Itatiba, 513                                          |
+|  9 | Rua Laranjal Paulista, 766                                |
+| 10 | Rua Arlindo Lucio da Silva, 125                           |
+| 11 | Rua Professora Amalia de Arruda L Martini, 621            |
+| 12 | Rua Rodolfo Ribeiro, 156                                  |
+| 13 | Avenida Francisco Glicerio, 1058                          |
+| 14 | Rua Celso de Barros, 213                                  |
+| 15 | Avenida da Saudade, 869                                   |
+| 16 | Rua Professora Nadir Leite do Canto, 40                   |
+| 17 | Rua Jose Ferreira da Silva, 385                           |
+| 18 | Rua Cristovao Bonini, 597                                 |
+| 19 | Rua Gentil Ribeiro, 54                                    |
+| 20 | Rua Mario Bassani, 206                                    |
+| 21 | Rua Virginia Fontes da Silva Padilha, 35                  |
+| 22 | Rua Sarah Kubitschek de Oliveira, 87                      |
+| 23 | Rua Antonio Luchiari, 499                                 |
+| 24 | Rua Antonio Fernando Von Ah, 176                          |
+| 25 | Rua Apostal Sotir Tako, 35                                |
+| 26 | Rua Rogerio Garcia Sanches, 488                           |
+| 27 | Rua Anair Caetano Goncalves, 608                          |
+| 28 | Rua Manoella Marcolino da Silva Derigo, 65                |
+| 29 | Rua Onze, 609                                             |
+| 30 | Rua Cacilda Becker, 0 / Rua Zulmira de Souza Rodrigues, 0 |
+| 31 | Rua Urupes, 75                                            |
+| 32 | Rua Jose Gomes Oliveira Filho, 173                        |
+| 33 | Rua Itaocara, 31                                          |
+| 34 | Rua Antonio Baracat, 36                                   |
+| 35 | Avenida Marginal, 584                                     |
+| 36 | Rua Roberto Antonio Manfredini Filho, 328                 |
+| 37 | Rua Professora Carolina de Oliveira, 5                    |
+| 38 | Avenida John Boyd Dunlop, 12500                           |
+| 39 | Rua Romeu Marinelli, 780                                  |
+| 40 | Rua Fernando Padua Castro Mundt, 517                      |
+| 41 | Rua Rene Verinaud, 512                                    |
+| 42 | Rua Rene Verinaud, 530                                    |
+| 43 | Rua Expedicionario Horacio Carlos Teixeira, 25            |
+| 44 | Rua Guilherme Fragoso Ferrao, 112                         |
+| 45 | Rua Celso Soares Couto, 366                               |
+| 46 | Rua General Carlos Coari Iracema Gomes, 202               |
+| 47 | Rua Rio Capivari, 72                                      |
+| 48 | Rua Expedicionario Horacio Carlos Teixeira, 33            |
+| 49 | Rua Expedicionario Horacio CArlos Teixeira, 41            |
+| 50 | Rua Osvaldo Gallerani, 494                                |
++----+-----------------------------------------------------------+
+50 rows in set (0.001 sec)
+
+MariaDB [osmakers]> select id,endereco from oss where data = "2019-11-17";
++----+------------------------------------------------+
+| id | endereco                                       |
++----+------------------------------------------------+
+|  1 | Rua Maximiliano Weinlich, 34                   |
+|  2 | Rua Nilo Rezende Rubim, 35                     |
+|  3 | Avenida das Amoreiras, 5300                    |
+|  4 | Avenida das Amoreiras, 4990                    |
+|  5 | Rua Doutor Israel Martins, 45                  |
+|  6 | Rua Mineiros do Tiete, 635                     |
+|  7 | Rua General Lauro Sodre, 514                   |
+|  8 | Rua Itatiba, 513                               |
+|  9 | Rua Laranjal Paulista, 766                     |
+| 10 | Rua Arlindo Lucio da Silva, 125                |
+| 11 | Rua Professora Amalia de Arruda L Martini, 621 |
+| 12 | Rua Rodolfo Ribeiro, 156                       |
+| 13 | Avenida Francisco Glicerio, 1058               |
+| 14 | Rua Celso de Barros, 213                       |
+| 15 | Avenida da Saudade, 869                        |
+| 16 | Rua Professora Nadir Leite do Canto, 40        |
+| 17 | Rua Jose Ferreira da Silva, 385                |
+| 18 | Rua Cristovao Bonini, 597                      |
+| 19 | Rua Gentil Ribeiro, 54                         |
+| 20 | Rua Mario Bassani, 206                         |
+| 21 | Rua Virginia Fontes da Silva Padilha, 35       |
+| 22 | Rua Sarah Kubitschek de Oliveira, 87           |
+| 23 | Rua Antonio Luchiari, 499                      |
++----+------------------------------------------------+
+23 rows in set (0.000 sec)
+
+MariaDB [osmakers]> select county(*) from oss where data = "2019-11-18";
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '*) from oss where data = "2019-11-18"' at line 1
+MariaDB [osmakers]> select county(*) from oss where data ="2019-11-18";
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '*) from oss where data ="2019-11-18"' at line 1
+MariaDB [osmakers]> select county(*) from oss where data ='2019-11-18';
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '*) from oss where data ='2019-11-18'' at line 1
+MariaDB [osmakers]> select count(*) from oss where data ='2019-11-18';
++----------+
+| count(*) |
++----------+
+|       27 |
++----------+
+1 row in set (0.001 sec)
+
+MariaDB [osmakers]> select sum(valor) from oss where id_bairro=3;
++------------+
+| sum(valor) |
++------------+
+|  135960.00 |
++------------+
+1 row in set (0.001 sec)
+
+MariaDB [osmakers]> select sum(valor) as total from oss where id_bairro=3;
++-----------+
+| total     |
++-----------+
+| 135960.00 |
++-----------+
+1 row in set (0.001 sec)
+
+MariaDB [osmakers]> select sum(valor) as total from oss group by id_bairro;
++-----------+
+| total     |
++-----------+
+| 187634.00 |
+| 330237.00 |
+| 135960.00 |
+| 380137.00 |
+| 119611.00 |
++-----------+
+5 rows in set (0.001 sec)
+
+MariaDB [osmakers]> select id, sum(valor) as total from oss group by id_bairro;
++----+-----------+
+| id | total     |
++----+-----------+
+|  1 | 187634.00 |
+| 11 | 330237.00 |
+| 24 | 135960.00 |
+| 32 | 380137.00 |
+| 45 | 119611.00 |
++----+-----------+
+5 rows in set (0.001 sec)
+
+MariaDB [osmakers]> select id_bairro, sum(valor) as total from oss group by id_bairro;
++-----------+-----------+
+| id_bairro | total     |
++-----------+-----------+
+|         1 | 187634.00 |
+|         2 | 330237.00 |
+|         3 | 135960.00 |
+|         4 | 380137.00 |
+|         5 | 119611.00 |
++-----------+-----------+
+5 rows in set (0.001 sec)
+
+MariaDB [osmakers]> desc oss;
++--------------+--------------+------+-----+---------+----------------+
+| Field        | Type         | Null | Key | Default | Extra          |
++--------------+--------------+------+-----+---------+----------------+
+| id           | int(11)      | NO   | PRI | NULL    | auto_increment |
+| endereco     | text         | YES  |     | NULL    |                |
+| id_bairro    | int(11)      | NO   | MUL | NULL    |                |
+| id_tipo      | int(11)      | NO   | MUL | NULL    |                |
+| duracao_prev | int(11)      | YES  |     | NULL    |                |
+| duracao_real | int(11)      | YES  |     | NULL    |                |
+| valor        | decimal(7,2) | YES  |     | NULL    |                |
+| data         | date         | YES  |     | NULL    |                |
++--------------+--------------+------+-----+---------+----------------+
+8 rows in set (0.012 sec)
+
+MariaDB [osmakers]> select id_equipe, count(*) from funcionarios group by id_equipe;
++-----------+----------+
+| id_equipe | count(*) |
++-----------+----------+
+|         1 |        6 |
+|         2 |        5 |
+|         3 |        7 |
+|         4 |        7 |
+|         5 |        7 |
++-----------+----------+
+5 rows in set (0.001 sec)
+
+MariaDB [osmakers]> select id_bairro sum(valor) as total from oss group by id_bairro order by total;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'sum(valor) as total from oss group by id_bairro order by total' at line 1
+MariaDB [osmakers]> select id_bairro, sum(valor) as total from oss group by id_bairro order by total;
++-----------+-----------+
+| id_bairro | total     |
++-----------+-----------+
+|         5 | 119611.00 |
+|         3 | 135960.00 |
+|         1 | 187634.00 |
+|         2 | 330237.00 |
+|         4 | 380137.00 |
++-----------+-----------+
+5 rows in set (0.001 sec)
+
+MariaDB [osmakers]> select id_bairro, sum(valor) as total from oss group by id_bairro order by toral desc;
+ERROR 1054 (42S22): Unknown column 'toral' in 'order clause'
+MariaDB [osmakers]> select id_bairro, sum(valor) as total from oss group by id_bairro order by total desc;
++-----------+-----------+
+| id_bairro | total     |
++-----------+-----------+
+|         4 | 380137.00 |
+|         2 | 330237.00 |
+|         1 | 187634.00 |
+|         3 | 135960.00 |
+|         5 | 119611.00 |
++-----------+-----------+
+5 rows in set (0.001 sec)
+
+MariaDB [osmakers]> select id_bairro, sum(valor) as total from oss group by id_bairro order by total desc limit 1, 1;
++-----------+-----------+
+| id_bairro | total     |
++-----------+-----------+
+|         2 | 330237.00 |
++-----------+-----------+
+1 row in set (0.001 sec)
+
+MariaDB [osmakers]> select id_bairro, sum(valor) as total from oss group by id_bairro order by total desc limit 1, 1;
++-----------+-----------+
+| id_bairro | total     |
++-----------+-----------+
+|         2 | 330237.00 |
++-----------+-----------+
+1 row in set (0.001 sec)
+
+MariaDB [osmakers]> select id_bairro, sum(valor) as total from oss group by id_bairro order by total desc limit 0, 1;
++-----------+-----------+
+| id_bairro | total     |
++-----------+-----------+
+|         4 | 380137.00 |
++-----------+-----------+
+1 row in set (0.001 sec)
+
+MariaDB [osmakers]> select id_bairro, sum(valor) as total from oss group by id_bairro order by total desc limit 0, 4;
++-----------+-----------+
+| id_bairro | total     |
++-----------+-----------+
+|         4 | 380137.00 |
+|         2 | 330237.00 |
+|         1 | 187634.00 |
+|         3 | 135960.00 |
++-----------+-----------+
+4 rows in set (0.001 sec)
+
+MariaDB [osmakers]> select id_bairro, sum(valor) as total from oss group by id_bairro order by total desc limit 0, 2;
++-----------+-----------+
+| id_bairro | total     |
++-----------+-----------+
+|         4 | 380137.00 |
+|         2 | 330237.00 |
++-----------+-----------+
+2 rows in set (0.001 sec)
+
+MariaDB [osmakers]> select id_bairro, sum(valor) as total from oss group by id_bairro order by total desc limit 0, 0;
+Empty set (0.000 sec)
+
+MariaDB [osmakers]> select id_bairro, sum(valor) as total from oss group by id_bairro order by total desc limit 0, 1;
++-----------+-----------+
+| id_bairro | total     |
++-----------+-----------+
+|         4 | 380137.00 |
++-----------+-----------+
+1 row in set (0.001 sec)
+
+MariaDB [osmakers]> select id_bairro, sum(valor) as total from oss group by id_bairro order by total desc limit 0, 5;
++-----------+-----------+
+| id_bairro | total     |
++-----------+-----------+
+|         4 | 380137.00 |
+|         2 | 330237.00 |
+|         1 | 187634.00 |
+|         3 | 135960.00 |
+|         5 | 119611.00 |
++-----------+-----------+
+5 rows in set (0.000 sec)
+
+MariaDB [osmakers]> select id_bairro, sum(valor) as total from oss group by id_bairro order by total desc limit 0, 3;
++-----------+-----------+
+| id_bairro | total     |
++-----------+-----------+
+|         4 | 380137.00 |
+|         2 | 330237.00 |
+|         1 | 187634.00 |
++-----------+-----------+
+3 rows in set (0.000 sec)
+
+MariaDB [osmakers]> select id_bairro, sum(valor) as total from oss group by id_bairro;
++-----------+-----------+
+| id_bairro | total     |
++-----------+-----------+
+|         1 | 187634.00 |
+|         2 | 330237.00 |
+|         3 | 135960.00 |
+|         4 | 380137.00 |
+|         5 | 119611.00 |
++-----------+-----------+
+5 rows in set (0.001 sec)
+
+MariaDB [osmakers]> select * from (select id_bairro, sum(valor) as total from oss group by id_bairro)ass ;
++-----------+-----------+
+| id_bairro | total     |
++-----------+-----------+
+|         1 | 187634.00 |
+|         2 | 330237.00 |
+|         3 | 135960.00 |
+|         4 | 380137.00 |
+|         5 | 119611.00 |
++-----------+-----------+
+5 rows in set (0.001 sec)
+
+MariaDB [osmakers]> select max (total) from (select id_bairro, sum(valor) as total from oss group by id_bairro)ass ;
+ERROR 1630 (42000): FUNCTION osmakers.max does not exist. Check the 'Function Name Parsing and Resolution' section in the Reference Manual
+MariaDB [osmakers]> select max (total) from (select id_bairro, sum(valor) as total from oss group by id_bairro)aSs ;
+ERROR 1630 (42000): FUNCTION osmakers.max does not exist. Check the 'Function Name Parsing and Resolution' section in the Reference Manual
+MariaDB [osmakers]> select max (total) from (select id_bairro, sum(valor) as total from oss group by id_bairro) as S;
+ERROR 1630 (42000): FUNCTION osmakers.max does not exist. Check the 'Function Name Parsing and Resolution' section in the Reference Manual
+MariaDB [osmakers]> select max (total) from (select id_bairro, sum(valor) as total from oss group by id_bairro) as S ;
+ERROR 1630 (42000): FUNCTION osmakers.max does not exist. Check the 'Function Name Parsing and Resolution' section in the Reference Manual
+MariaDB [osmakers]> select max(total) from (select id_bairro, sum(valor) as total from oss group by id_bairro) as S ;
++------------+
+| max(total) |
++------------+
+|  380137.00 |
++------------+
+1 row in set (0.001 sec)
+
+MariaDB [osmakers]> select * from funcionarios inner join equipes;
++----+---------------------+-----------+----+----------+
+| id | nome                | id_equipe | id | nome     |
++----+---------------------+-----------+----+----------+
+|  1 | Mariana Alves       |         1 |  1 | Equipe A |
+|  1 | Mariana Alves       |         1 |  2 | Equipe B |
+|  1 | Mariana Alves       |         1 |  3 | Equipe C |
+|  1 | Mariana Alves       |         1 |  4 | Equipe D |
+|  1 | Mariana Alves       |         1 |  5 | Equipe E |
+|  2 | Mariana Andressa    |         1 |  1 | Equipe A |
+|  2 | Mariana Andressa    |         1 |  2 | Equipe B |
+|  2 | Mariana Andressa    |         1 |  3 | Equipe C |
+|  2 | Mariana Andressa    |         1 |  4 | Equipe D |
+|  2 | Mariana Andressa    |         1 |  5 | Equipe E |
+|  3 | Beatriz Beatriz     |         1 |  1 | Equipe A |
+|  3 | Beatriz Beatriz     |         1 |  2 | Equipe B |
+|  3 | Beatriz Beatriz     |         1 |  3 | Equipe C |
+|  3 | Beatriz Beatriz     |         1 |  4 | Equipe D |
+|  3 | Beatriz Beatriz     |         1 |  5 | Equipe E |
+|  4 | Rony Candeli        |         1 |  1 | Equipe A |
+|  4 | Rony Candeli        |         1 |  2 | Equipe B |
+|  4 | Rony Candeli        |         1 |  3 | Equipe C |
+|  4 | Rony Candeli        |         1 |  4 | Equipe D |
+|  4 | Rony Candeli        |         1 |  5 | Equipe E |
+|  5 | Ana Carolina        |         1 |  1 | Equipe A |
+|  5 | Ana Carolina        |         1 |  2 | Equipe B |
+|  5 | Ana Carolina        |         1 |  3 | Equipe C |
+|  5 | Ana Carolina        |         1 |  4 | Equipe D |
+|  5 | Ana Carolina        |         1 |  5 | Equipe E |
+|  6 | Caroline Caroline   |         1 |  1 | Equipe A |
+|  6 | Caroline Caroline   |         1 |  2 | Equipe B |
+|  6 | Caroline Caroline   |         1 |  3 | Equipe C |
+|  6 | Caroline Caroline   |         1 |  4 | Equipe D |
+|  6 | Caroline Caroline   |         1 |  5 | Equipe E |
+|  7 | Teresa Cristina     |         2 |  1 | Equipe A |
+|  7 | Teresa Cristina     |         2 |  2 | Equipe B |
+|  7 | Teresa Cristina     |         2 |  3 | Equipe C |
+|  7 | Teresa Cristina     |         2 |  4 | Equipe D |
+|  7 | Teresa Cristina     |         2 |  5 | Equipe E |
+|  8 | Marcelo Da Mata     |         2 |  1 | Equipe A |
+|  8 | Marcelo Da Mata     |         2 |  2 | Equipe B |
+|  8 | Marcelo Da Mata     |         2 |  3 | Equipe C |
+|  8 | Marcelo Da Mata     |         2 |  4 | Equipe D |
+|  8 | Marcelo Da Mata     |         2 |  5 | Equipe E |
+|  9 | Tatiana De Oliveira |         2 |  1 | Equipe A |
+|  9 | Tatiana De Oliveira |         2 |  2 | Equipe B |
+|  9 | Tatiana De Oliveira |         2 |  3 | Equipe C |
+|  9 | Tatiana De Oliveira |         2 |  4 | Equipe D |
+|  9 | Tatiana De Oliveira |         2 |  5 | Equipe E |
+| 10 | Lucas Ferrari       |         2 |  1 | Equipe A |
+| 10 | Lucas Ferrari       |         2 |  2 | Equipe B |
+| 10 | Lucas Ferrari       |         2 |  3 | Equipe C |
+| 10 | Lucas Ferrari       |         2 |  4 | Equipe D |
+| 10 | Lucas Ferrari       |         2 |  5 | Equipe E |
+| 11 | Leslie Gamarra      |         2 |  1 | Equipe A |
+| 11 | Leslie Gamarra      |         2 |  2 | Equipe B |
+| 11 | Leslie Gamarra      |         2 |  3 | Equipe C |
+| 11 | Leslie Gamarra      |         2 |  4 | Equipe D |
+| 11 | Leslie Gamarra      |         2 |  5 | Equipe E |
+| 12 | Nkuansambo Justem   |         3 |  1 | Equipe A |
+| 12 | Nkuansambo Justem   |         3 |  2 | Equipe B |
+| 12 | Nkuansambo Justem   |         3 |  3 | Equipe C |
+| 12 | Nkuansambo Justem   |         3 |  4 | Equipe D |
+| 12 | Nkuansambo Justem   |         3 |  5 | Equipe E |
+| 13 | Marion Jutglar      |         3 |  1 | Equipe A |
+| 13 | Marion Jutglar      |         3 |  2 | Equipe B |
+| 13 | Marion Jutglar      |         3 |  3 | Equipe C |
+| 13 | Marion Jutglar      |         3 |  4 | Equipe D |
+| 13 | Marion Jutglar      |         3 |  5 | Equipe E |
+| 14 | Laura Laura         |         3 |  1 | Equipe A |
+| 14 | Laura Laura         |         3 |  2 | Equipe B |
+| 14 | Laura Laura         |         3 |  3 | Equipe C |
+| 14 | Laura Laura         |         3 |  4 | Equipe D |
+| 14 | Laura Laura         |         3 |  5 | Equipe E |
+| 15 | Eloir Magalh├úes     |         3 |  1 | Equipe A |
+| 15 | Eloir Magalh├úes     |         3 |  2 | Equipe B |
+| 15 | Eloir Magalh├úes     |         3 |  3 | Equipe C |
+| 15 | Eloir Magalh├úes     |         3 |  4 | Equipe D |
+| 15 | Eloir Magalh├úes     |         3 |  5 | Equipe E |
+| 16 | Amanda Martins      |         3 |  1 | Equipe A |
+| 16 | Amanda Martins      |         3 |  2 | Equipe B |
+| 16 | Amanda Martins      |         3 |  3 | Equipe C |
+| 16 | Amanda Martins      |         3 |  4 | Equipe D |
+| 16 | Amanda Martins      |         3 |  5 | Equipe E |
+| 17 | Wilson Mateus       |         3 |  1 | Equipe A |
+| 17 | Wilson Mateus       |         3 |  2 | Equipe B |
+| 17 | Wilson Mateus       |         3 |  3 | Equipe C |
+| 17 | Wilson Mateus       |         3 |  4 | Equipe D |
+| 17 | Wilson Mateus       |         3 |  5 | Equipe E |
+| 18 | Megumi Miyata       |         3 |  1 | Equipe A |
+| 18 | Megumi Miyata       |         3 |  2 | Equipe B |
+| 18 | Megumi Miyata       |         3 |  3 | Equipe C |
+| 18 | Megumi Miyata       |         3 |  4 | Equipe D |
+| 18 | Megumi Miyata       |         3 |  5 | Equipe E |
+| 19 | Wilson Morais       |         4 |  1 | Equipe A |
+| 19 | Wilson Morais       |         4 |  2 | Equipe B |
+| 19 | Wilson Morais       |         4 |  3 | Equipe C |
+| 19 | Wilson Morais       |         4 |  4 | Equipe D |
+| 19 | Wilson Morais       |         4 |  5 | Equipe E |
+| 20 | Angela M            |         4 |  1 | Equipe A |
+| 20 | Angela M            |         4 |  2 | Equipe B |
+| 20 | Angela M            |         4 |  3 | Equipe C |
+| 20 | Angela M            |         4 |  4 | Equipe D |
+| 20 | Angela M            |         4 |  5 | Equipe E |
+| 21 | Domingos Mussumar   |         4 |  1 | Equipe A |
+| 21 | Domingos Mussumar   |         4 |  2 | Equipe B |
+| 21 | Domingos Mussumar   |         4 |  3 | Equipe C |
+| 21 | Domingos Mussumar   |         4 |  4 | Equipe D |
+| 21 | Domingos Mussumar   |         4 |  5 | Equipe E |
+| 22 | Debora Orsolon      |         4 |  1 | Equipe A |
+| 22 | Debora Orsolon      |         4 |  2 | Equipe B |
+| 22 | Debora Orsolon      |         4 |  3 | Equipe C |
+| 22 | Debora Orsolon      |         4 |  4 | Equipe D |
+| 22 | Debora Orsolon      |         4 |  5 | Equipe E |
+| 23 | Cristiane Reis      |         4 |  1 | Equipe A |
+| 23 | Cristiane Reis      |         4 |  2 | Equipe B |
+| 23 | Cristiane Reis      |         4 |  3 | Equipe C |
+| 23 | Cristiane Reis      |         4 |  4 | Equipe D |
+| 23 | Cristiane Reis      |         4 |  5 | Equipe E |
+| 24 | Guilherme Rodrigues |         4 |  1 | Equipe A |
+| 24 | Guilherme Rodrigues |         4 |  2 | Equipe B |
+| 24 | Guilherme Rodrigues |         4 |  3 | Equipe C |
+| 24 | Guilherme Rodrigues |         4 |  4 | Equipe D |
+| 24 | Guilherme Rodrigues |         4 |  5 | Equipe E |
+| 25 | Silvana Sales       |         4 |  1 | Equipe A |
+| 25 | Silvana Sales       |         4 |  2 | Equipe B |
+| 25 | Silvana Sales       |         4 |  3 | Equipe C |
+| 25 | Silvana Sales       |         4 |  4 | Equipe D |
+| 25 | Silvana Sales       |         4 |  5 | Equipe E |
+| 26 | Ta├¡sa Salton        |         5 |  1 | Equipe A |
+| 26 | Ta├¡sa Salton        |         5 |  2 | Equipe B |
+| 26 | Ta├¡sa Salton        |         5 |  3 | Equipe C |
+| 26 | Ta├¡sa Salton        |         5 |  4 | Equipe D |
+| 26 | Ta├¡sa Salton        |         5 |  5 | Equipe E |
+| 27 | Aline Soares        |         5 |  1 | Equipe A |
+| 27 | Aline Soares        |         5 |  2 | Equipe B |
+| 27 | Aline Soares        |         5 |  3 | Equipe C |
+| 27 | Aline Soares        |         5 |  4 | Equipe D |
+| 27 | Aline Soares        |         5 |  5 | Equipe E |
+| 28 | Alaercio Vieira     |         5 |  1 | Equipe A |
+| 28 | Alaercio Vieira     |         5 |  2 | Equipe B |
+| 28 | Alaercio Vieira     |         5 |  3 | Equipe C |
+| 28 | Alaercio Vieira     |         5 |  4 | Equipe D |
+| 28 | Alaercio Vieira     |         5 |  5 | Equipe E |
+| 29 | Roseane Yumi        |         5 |  1 | Equipe A |
+| 29 | Roseane Yumi        |         5 |  2 | Equipe B |
+| 29 | Roseane Yumi        |         5 |  3 | Equipe C |
+| 29 | Roseane Yumi        |         5 |  4 | Equipe D |
+| 29 | Roseane Yumi        |         5 |  5 | Equipe E |
+| 30 | Angelica Zanetti    |         5 |  1 | Equipe A |
+| 30 | Angelica Zanetti    |         5 |  2 | Equipe B |
+| 30 | Angelica Zanetti    |         5 |  3 | Equipe C |
+| 30 | Angelica Zanetti    |         5 |  4 | Equipe D |
+| 30 | Angelica Zanetti    |         5 |  5 | Equipe E |
+| 31 | Felgueiras Zeferino |         5 |  1 | Equipe A |
+| 31 | Felgueiras Zeferino |         5 |  2 | Equipe B |
+| 31 | Felgueiras Zeferino |         5 |  3 | Equipe C |
+| 31 | Felgueiras Zeferino |         5 |  4 | Equipe D |
+| 31 | Felgueiras Zeferino |         5 |  5 | Equipe E |
+| 32 | Megumi              |         5 |  1 | Equipe A |
+| 32 | Megumi              |         5 |  2 | Equipe B |
+| 32 | Megumi              |         5 |  3 | Equipe C |
+| 32 | Megumi              |         5 |  4 | Equipe D |
+| 32 | Megumi              |         5 |  5 | Equipe E |
++----+---------------------+-----------+----+----------+
+160 rows in set (0.001 sec)
+
+MariaDB [osmakers]> select * from funcionarios inner join equipes ON funcionarios.id_equipes=equipes.idd;;
+ERROR 1054 (42S22): Unknown column 'funcionarios.id_equipes' in 'on clause'
+ERROR: No query specified
+
+MariaDB [osmakers]> select * from funcionarios inner join equipes ON funcionarios.id_equipes=equipes.idd;
+ERROR 1054 (42S22): Unknown column 'funcionarios.id_equipes' in 'on clause'
+MariaDB [osmakers]> select * from funcionarios inner join equipes ON funcionarios.id_equipes=equipes.id;
+ERROR 1054 (42S22): Unknown column 'funcionarios.id_equipes' in 'on clause'
+MariaDB [osmakers]> select * from funcionarios inner join equipes ON funcionarios.id_equipe=equipes.id;
++----+---------------------+-----------+----+----------+
+| id | nome                | id_equipe | id | nome     |
++----+---------------------+-----------+----+----------+
+|  1 | Mariana Alves       |         1 |  1 | Equipe A |
+|  2 | Mariana Andressa    |         1 |  1 | Equipe A |
+|  3 | Beatriz Beatriz     |         1 |  1 | Equipe A |
+|  4 | Rony Candeli        |         1 |  1 | Equipe A |
+|  5 | Ana Carolina        |         1 |  1 | Equipe A |
+|  6 | Caroline Caroline   |         1 |  1 | Equipe A |
+|  7 | Teresa Cristina     |         2 |  2 | Equipe B |
+|  8 | Marcelo Da Mata     |         2 |  2 | Equipe B |
+|  9 | Tatiana De Oliveira |         2 |  2 | Equipe B |
+| 10 | Lucas Ferrari       |         2 |  2 | Equipe B |
+| 11 | Leslie Gamarra      |         2 |  2 | Equipe B |
+| 12 | Nkuansambo Justem   |         3 |  3 | Equipe C |
+| 13 | Marion Jutglar      |         3 |  3 | Equipe C |
+| 14 | Laura Laura         |         3 |  3 | Equipe C |
+| 15 | Eloir Magalh├úes     |         3 |  3 | Equipe C |
+| 16 | Amanda Martins      |         3 |  3 | Equipe C |
+| 17 | Wilson Mateus       |         3 |  3 | Equipe C |
+| 18 | Megumi Miyata       |         3 |  3 | Equipe C |
+| 19 | Wilson Morais       |         4 |  4 | Equipe D |
+| 20 | Angela M            |         4 |  4 | Equipe D |
+| 21 | Domingos Mussumar   |         4 |  4 | Equipe D |
+| 22 | Debora Orsolon      |         4 |  4 | Equipe D |
+| 23 | Cristiane Reis      |         4 |  4 | Equipe D |
+| 24 | Guilherme Rodrigues |         4 |  4 | Equipe D |
+| 25 | Silvana Sales       |         4 |  4 | Equipe D |
+| 26 | Ta├¡sa Salton        |         5 |  5 | Equipe E |
+| 27 | Aline Soares        |         5 |  5 | Equipe E |
+| 28 | Alaercio Vieira     |         5 |  5 | Equipe E |
+| 29 | Roseane Yumi        |         5 |  5 | Equipe E |
+| 30 | Angelica Zanetti    |         5 |  5 | Equipe E |
+| 31 | Felgueiras Zeferino |         5 |  5 | Equipe E |
+| 32 | Megumi              |         5 |  5 | Equipe E |
++----+---------------------+-----------+----+----------+
+32 rows in set (0.001 sec)
+
+MariaDB [osmakers]> select * from funcionarios f inner join equipes e ON f.id_equipes=equipe[s.idd;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '[s.idd' at line 1
+MariaDB [osmakers]>
+MariaDB [osmakers]> select * from funcionarios f inner join equipes e ON f.id_equipes=e.idd;
+ERROR 1054 (42S22): Unknown column 'f.id_equipes' in 'on clause'
+MariaDB [osmakers]> select * from funcionarios f inner join equipes e ON f.id_equipes=e.id;
+ERROR 1054 (42S22): Unknown column 'f.id_equipes' in 'on clause'
+MariaDB [osmakers]> select * from funcionarios f inner join equipes e ON f.id_equipes=e.id;
+ERROR 1054 (42S22): Unknown column 'f.id_equipes' in 'on clause'
+MariaDB [osmakers]> select * from equipes,funcionarios;
++----+----------+----+---------------------+-----------+
+| id | nome     | id | nome                | id_equipe |
++----+----------+----+---------------------+-----------+
+|  1 | Equipe A |  1 | Mariana Alves       |         1 |
+|  2 | Equipe B |  1 | Mariana Alves       |         1 |
+|  3 | Equipe C |  1 | Mariana Alves       |         1 |
+|  4 | Equipe D |  1 | Mariana Alves       |         1 |
+|  5 | Equipe E |  1 | Mariana Alves       |         1 |
+|  1 | Equipe A |  2 | Mariana Andressa    |         1 |
+|  2 | Equipe B |  2 | Mariana Andressa    |         1 |
+|  3 | Equipe C |  2 | Mariana Andressa    |         1 |
+|  4 | Equipe D |  2 | Mariana Andressa    |         1 |
+|  5 | Equipe E |  2 | Mariana Andressa    |         1 |
+|  1 | Equipe A |  3 | Beatriz Beatriz     |         1 |
+|  2 | Equipe B |  3 | Beatriz Beatriz     |         1 |
+|  3 | Equipe C |  3 | Beatriz Beatriz     |         1 |
+|  4 | Equipe D |  3 | Beatriz Beatriz     |         1 |
+|  5 | Equipe E |  3 | Beatriz Beatriz     |         1 |
+|  1 | Equipe A |  4 | Rony Candeli        |         1 |
+|  2 | Equipe B |  4 | Rony Candeli        |         1 |
+|  3 | Equipe C |  4 | Rony Candeli        |         1 |
+|  4 | Equipe D |  4 | Rony Candeli        |         1 |
+|  5 | Equipe E |  4 | Rony Candeli        |         1 |
+|  1 | Equipe A |  5 | Ana Carolina        |         1 |
+|  2 | Equipe B |  5 | Ana Carolina        |         1 |
+|  3 | Equipe C |  5 | Ana Carolina        |         1 |
+|  4 | Equipe D |  5 | Ana Carolina        |         1 |
+|  5 | Equipe E |  5 | Ana Carolina        |         1 |
+|  1 | Equipe A |  6 | Caroline Caroline   |         1 |
+|  2 | Equipe B |  6 | Caroline Caroline   |         1 |
+|  3 | Equipe C |  6 | Caroline Caroline   |         1 |
+|  4 | Equipe D |  6 | Caroline Caroline   |         1 |
+|  5 | Equipe E |  6 | Caroline Caroline   |         1 |
+|  1 | Equipe A |  7 | Teresa Cristina     |         2 |
+|  2 | Equipe B |  7 | Teresa Cristina     |         2 |
+|  3 | Equipe C |  7 | Teresa Cristina     |         2 |
+|  4 | Equipe D |  7 | Teresa Cristina     |         2 |
+|  5 | Equipe E |  7 | Teresa Cristina     |         2 |
+|  1 | Equipe A |  8 | Marcelo Da Mata     |         2 |
+|  2 | Equipe B |  8 | Marcelo Da Mata     |         2 |
+|  3 | Equipe C |  8 | Marcelo Da Mata     |         2 |
+|  4 | Equipe D |  8 | Marcelo Da Mata     |         2 |
+|  5 | Equipe E |  8 | Marcelo Da Mata     |         2 |
+|  1 | Equipe A |  9 | Tatiana De Oliveira |         2 |
+|  2 | Equipe B |  9 | Tatiana De Oliveira |         2 |
+|  3 | Equipe C |  9 | Tatiana De Oliveira |         2 |
+|  4 | Equipe D |  9 | Tatiana De Oliveira |         2 |
+|  5 | Equipe E |  9 | Tatiana De Oliveira |         2 |
+|  1 | Equipe A | 10 | Lucas Ferrari       |         2 |
+|  2 | Equipe B | 10 | Lucas Ferrari       |         2 |
+|  3 | Equipe C | 10 | Lucas Ferrari       |         2 |
+|  4 | Equipe D | 10 | Lucas Ferrari       |         2 |
+|  5 | Equipe E | 10 | Lucas Ferrari       |         2 |
+|  1 | Equipe A | 11 | Leslie Gamarra      |         2 |
+|  2 | Equipe B | 11 | Leslie Gamarra      |         2 |
+|  3 | Equipe C | 11 | Leslie Gamarra      |         2 |
+|  4 | Equipe D | 11 | Leslie Gamarra      |         2 |
+|  5 | Equipe E | 11 | Leslie Gamarra      |         2 |
+|  1 | Equipe A | 12 | Nkuansambo Justem   |         3 |
+|  2 | Equipe B | 12 | Nkuansambo Justem   |         3 |
+|  3 | Equipe C | 12 | Nkuansambo Justem   |         3 |
+|  4 | Equipe D | 12 | Nkuansambo Justem   |         3 |
+|  5 | Equipe E | 12 | Nkuansambo Justem   |         3 |
+|  1 | Equipe A | 13 | Marion Jutglar      |         3 |
+|  2 | Equipe B | 13 | Marion Jutglar      |         3 |
+|  3 | Equipe C | 13 | Marion Jutglar      |         3 |
+|  4 | Equipe D | 13 | Marion Jutglar      |         3 |
+|  5 | Equipe E | 13 | Marion Jutglar      |         3 |
+|  1 | Equipe A | 14 | Laura Laura         |         3 |
+|  2 | Equipe B | 14 | Laura Laura         |         3 |
+|  3 | Equipe C | 14 | Laura Laura         |         3 |
+|  4 | Equipe D | 14 | Laura Laura         |         3 |
+|  5 | Equipe E | 14 | Laura Laura         |         3 |
+|  1 | Equipe A | 15 | Eloir Magalh├úes     |         3 |
+|  2 | Equipe B | 15 | Eloir Magalh├úes     |         3 |
+|  3 | Equipe C | 15 | Eloir Magalh├úes     |         3 |
+|  4 | Equipe D | 15 | Eloir Magalh├úes     |         3 |
+|  5 | Equipe E | 15 | Eloir Magalh├úes     |         3 |
+|  1 | Equipe A | 16 | Amanda Martins      |         3 |
+|  2 | Equipe B | 16 | Amanda Martins      |         3 |
+|  3 | Equipe C | 16 | Amanda Martins      |         3 |
+|  4 | Equipe D | 16 | Amanda Martins      |         3 |
+|  5 | Equipe E | 16 | Amanda Martins      |         3 |
+|  1 | Equipe A | 17 | Wilson Mateus       |         3 |
+|  2 | Equipe B | 17 | Wilson Mateus       |         3 |
+|  3 | Equipe C | 17 | Wilson Mateus       |         3 |
+|  4 | Equipe D | 17 | Wilson Mateus       |         3 |
+|  5 | Equipe E | 17 | Wilson Mateus       |         3 |
+|  1 | Equipe A | 18 | Megumi Miyata       |         3 |
+|  2 | Equipe B | 18 | Megumi Miyata       |         3 |
+|  3 | Equipe C | 18 | Megumi Miyata       |         3 |
+|  4 | Equipe D | 18 | Megumi Miyata       |         3 |
+|  5 | Equipe E | 18 | Megumi Miyata       |         3 |
+|  1 | Equipe A | 19 | Wilson Morais       |         4 |
+|  2 | Equipe B | 19 | Wilson Morais       |         4 |
+|  3 | Equipe C | 19 | Wilson Morais       |         4 |
+|  4 | Equipe D | 19 | Wilson Morais       |         4 |
+|  5 | Equipe E | 19 | Wilson Morais       |         4 |
+|  1 | Equipe A | 20 | Angela M            |         4 |
+|  2 | Equipe B | 20 | Angela M            |         4 |
+|  3 | Equipe C | 20 | Angela M            |         4 |
+|  4 | Equipe D | 20 | Angela M            |         4 |
+|  5 | Equipe E | 20 | Angela M            |         4 |
+|  1 | Equipe A | 21 | Domingos Mussumar   |         4 |
+|  2 | Equipe B | 21 | Domingos Mussumar   |         4 |
+|  3 | Equipe C | 21 | Domingos Mussumar   |         4 |
+|  4 | Equipe D | 21 | Domingos Mussumar   |         4 |
+|  5 | Equipe E | 21 | Domingos Mussumar   |         4 |
+|  1 | Equipe A | 22 | Debora Orsolon      |         4 |
+|  2 | Equipe B | 22 | Debora Orsolon      |         4 |
+|  3 | Equipe C | 22 | Debora Orsolon      |         4 |
+|  4 | Equipe D | 22 | Debora Orsolon      |         4 |
+|  5 | Equipe E | 22 | Debora Orsolon      |         4 |
+|  1 | Equipe A | 23 | Cristiane Reis      |         4 |
+|  2 | Equipe B | 23 | Cristiane Reis      |         4 |
+|  3 | Equipe C | 23 | Cristiane Reis      |         4 |
+|  4 | Equipe D | 23 | Cristiane Reis      |         4 |
+|  5 | Equipe E | 23 | Cristiane Reis      |         4 |
+|  1 | Equipe A | 24 | Guilherme Rodrigues |         4 |
+|  2 | Equipe B | 24 | Guilherme Rodrigues |         4 |
+|  3 | Equipe C | 24 | Guilherme Rodrigues |         4 |
+|  4 | Equipe D | 24 | Guilherme Rodrigues |         4 |
+|  5 | Equipe E | 24 | Guilherme Rodrigues |         4 |
+|  1 | Equipe A | 25 | Silvana Sales       |         4 |
+|  2 | Equipe B | 25 | Silvana Sales       |         4 |
+|  3 | Equipe C | 25 | Silvana Sales       |         4 |
+|  4 | Equipe D | 25 | Silvana Sales       |         4 |
+|  5 | Equipe E | 25 | Silvana Sales       |         4 |
+|  1 | Equipe A | 26 | Ta├¡sa Salton        |         5 |
+|  2 | Equipe B | 26 | Ta├¡sa Salton        |         5 |
+|  3 | Equipe C | 26 | Ta├¡sa Salton        |         5 |
+|  4 | Equipe D | 26 | Ta├¡sa Salton        |         5 |
+|  5 | Equipe E | 26 | Ta├¡sa Salton        |         5 |
+|  1 | Equipe A | 27 | Aline Soares        |         5 |
+|  2 | Equipe B | 27 | Aline Soares        |         5 |
+|  3 | Equipe C | 27 | Aline Soares        |         5 |
+|  4 | Equipe D | 27 | Aline Soares        |         5 |
+|  5 | Equipe E | 27 | Aline Soares        |         5 |
+|  1 | Equipe A | 28 | Alaercio Vieira     |         5 |
+|  2 | Equipe B | 28 | Alaercio Vieira     |         5 |
+|  3 | Equipe C | 28 | Alaercio Vieira     |         5 |
+|  4 | Equipe D | 28 | Alaercio Vieira     |         5 |
+|  5 | Equipe E | 28 | Alaercio Vieira     |         5 |
+|  1 | Equipe A | 29 | Roseane Yumi        |         5 |
+|  2 | Equipe B | 29 | Roseane Yumi        |         5 |
+|  3 | Equipe C | 29 | Roseane Yumi        |         5 |
+|  4 | Equipe D | 29 | Roseane Yumi        |         5 |
+|  5 | Equipe E | 29 | Roseane Yumi        |         5 |
+|  1 | Equipe A | 30 | Angelica Zanetti    |         5 |
+|  2 | Equipe B | 30 | Angelica Zanetti    |         5 |
+|  3 | Equipe C | 30 | Angelica Zanetti    |         5 |
+|  4 | Equipe D | 30 | Angelica Zanetti    |         5 |
+|  5 | Equipe E | 30 | Angelica Zanetti    |         5 |
+|  1 | Equipe A | 31 | Felgueiras Zeferino |         5 |
+|  2 | Equipe B | 31 | Felgueiras Zeferino |         5 |
+|  3 | Equipe C | 31 | Felgueiras Zeferino |         5 |
+|  4 | Equipe D | 31 | Felgueiras Zeferino |         5 |
+|  5 | Equipe E | 31 | Felgueiras Zeferino |         5 |
+|  1 | Equipe A | 32 | Megumi              |         5 |
+|  2 | Equipe B | 32 | Megumi              |         5 |
+|  3 | Equipe C | 32 | Megumi              |         5 |
+|  4 | Equipe D | 32 | Megumi              |         5 |
+|  5 | Equipe E | 32 | Megumi              |         5 |
++----+----------+----+---------------------+-----------+
+160 rows in set (0.001 sec)
+
+MariaDB [osmakers]> select o.id, o.endereco, t.nome, o.id_bairro from(oss o inner join tipo_de_os t on o.id_tio=t.id;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+MariaDB [osmakers]> select o.id, o.endereco, t.nome, o.id_bairro from(oss o inner join tipo_de_os t on o.id_tipo=t.id;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+MariaDB [osmakers]> select o.id, o.endereco, t.nome, o.id_bairro from(oss o inner join tipo_de_os t on o.id_tipo=t.id)
+    -> where o.id_bairro=1;
+ERROR 1146 (42S02): Table 'osmakers.tipo_de_os' doesn't exist
+MariaDB [osmakers]> select o.id, o.endereco, t.nome, o.id_bairro from(oss o inner join tipo_de_os t on o.id_tipo=t.id) where o.id_bairro=1;
+ERROR 1146 (42S02): Table 'osmakers.tipo_de_os' doesn't exist
+MariaDB [osmakers]> select * from oss o inner join tipos_de_os;
++----+-----------------------------------------------------------+-----------+---------+--------------+--------------+----------+------------+----+---------------------------------------------+
+| id | endereco                                                  | id_bairro | id_tipo | duracao_prev | duracao_real | valor    | data       | id | nome                                        |
++----+-----------------------------------------------------------+-----------+---------+--------------+--------------+----------+------------+----+---------------------------------------------+
+|  1 | Rua Maximiliano Weinlich, 34                              |         1 |       1 |          120 |          100 | 15000.00 | 2019-11-17 |  1 | Recapeamento de pavimento                   |
+|  1 | Rua Maximiliano Weinlich, 34                              |         1 |       1 |          120 |          100 | 15000.00 | 2019-11-17 |  2 | Fresagem cont├¡nua de pavimento a frio       |
+|  1 | Rua Maximiliano Weinlich, 34                              |         1 |       1 |          120 |          100 | 15000.00 | 2019-11-17 |  3 | Constru├º├úo e/ou recupera├º├úo de guias        |
+|  1 | Rua Maximiliano Weinlich, 34                              |         1 |       1 |          120 |          100 | 15000.00 | 2019-11-17 |  4 | Constru├º├úo e/ou recupera├º├úo de sarjetas     |
+|  2 | Rua Nilo Rezende Rubim, 35                                |         1 |       2 |          100 |          110 | 12000.00 | 2019-11-17 |  1 | Recapeamento de pavimento                   |
+|  2 | Rua Nilo Rezende Rubim, 35                                |         1 |       2 |          100 |          110 | 12000.00 | 2019-11-17 |  2 | Fresagem cont├¡nua de pavimento a frio       |
+|  2 | Rua Nilo Rezende Rubim, 35                                |         1 |       2 |          100 |          110 | 12000.00 | 2019-11-17 |  3 | Constru├º├úo e/ou recupera├º├úo de guias        |
+|  2 | Rua Nilo Rezende Rubim, 35                                |         1 |       2 |          100 |          110 | 12000.00 | 2019-11-17 |  4 | Constru├º├úo e/ou recupera├º├úo de sarjetas     |
+|  3 | Avenida das Amoreiras, 5300                               |         1 |       3 |          240 |          300 | 35000.00 | 2019-11-17 |  1 | Recapeamento de pavimento                   |
+|  3 | Avenida das Amoreiras, 5300                               |         1 |       3 |          240 |          300 | 35000.00 | 2019-11-17 |  2 | Fresagem cont├¡nua de pavimento a frio       |
+|  3 | Avenida das Amoreiras, 5300                               |         1 |       3 |          240 |          300 | 35000.00 | 2019-11-17 |  3 | Constru├º├úo e/ou recupera├º├úo de guias        |
+|  3 | Avenida das Amoreiras, 5300                               |         1 |       3 |          240 |          300 | 35000.00 | 2019-11-17 |  4 | Constru├º├úo e/ou recupera├º├úo de sarjetas     |
+|  4 | Avenida das Amoreiras, 4990                               |         1 |       4 |          360 |          380 | 11000.00 | 2019-11-17 |  1 | Recapeamento de pavimento                   |
+|  4 | Avenida das Amoreiras, 4990                               |         1 |       4 |          360 |          380 | 11000.00 | 2019-11-17 |  2 | Fresagem cont├¡nua de pavimento a frio       |
+|  4 | Avenida das Amoreiras, 4990                               |         1 |       4 |          360 |          380 | 11000.00 | 2019-11-17 |  3 | Constru├º├úo e/ou recupera├º├úo de guias        |
+|  4 | Avenida das Amoreiras, 4990                               |         1 |       4 |          360 |          380 | 11000.00 | 2019-11-17 |  4 | Constru├º├úo e/ou recupera├º├úo de sarjetas     |
+|  5 | Rua Doutor Israel Martins, 45                             |         1 |       2 |          480 |          480 | 10000.00 | 2019-11-17 |  1 | Recapeamento de pavimento                   |
+|  5 | Rua Doutor Israel Martins, 45                             |         1 |       2 |          480 |          480 | 10000.00 | 2019-11-17 |  2 | Fresagem cont├¡nua de pavimento a frio       |
+|  5 | Rua Doutor Israel Martins, 45                             |         1 |       2 |          480 |          480 | 10000.00 | 2019-11-17 |  3 | Constru├º├úo e/ou recupera├º├úo de guias        |
+|  5 | Rua Doutor Israel Martins, 45                             |         1 |       2 |          480 |          480 | 10000.00 | 2019-11-17 |  4 | Constru├º├úo e/ou recupera├º├úo de sarjetas     |
+|  6 | Rua Mineiros do Tiete, 635                                |         1 |       1 |          330 |          320 | 12500.00 | 2019-11-17 |  1 | Recapeamento de pavimento                   |
+|  6 | Rua Mineiros do Tiete, 635                                |         1 |       1 |          330 |          320 | 12500.00 | 2019-11-17 |  2 | Fresagem cont├¡nua de pavimento a frio       |
+|  6 | Rua Mineiros do Tiete, 635                                |         1 |       1 |          330 |          320 | 12500.00 | 2019-11-17 |  3 | Constru├º├úo e/ou recupera├º├úo de guias        |
+|  6 | Rua Mineiros do Tiete, 635                                |         1 |       1 |          330 |          320 | 12500.00 | 2019-11-17 |  4 | Constru├º├úo e/ou recupera├º├úo de sarjetas     |
+|  7 | Rua General Lauro Sodre, 514                              |         1 |       2 |          300 |          200 | 13350.00 | 2019-11-17 |  1 | Recapeamento de pavimento                   |
+|  7 | Rua General Lauro Sodre, 514                              |         1 |       2 |          300 |          200 | 13350.00 | 2019-11-17 |  2 | Fresagem cont├¡nua de pavimento a frio       |
+|  7 | Rua General Lauro Sodre, 514                              |         1 |       2 |          300 |          200 | 13350.00 | 2019-11-17 |  3 | Constru├º├úo e/ou recupera├º├úo de guias        |
+|  7 | Rua General Lauro Sodre, 514                              |         1 |       2 |          300 |          200 | 13350.00 | 2019-11-17 |  4 | Constru├º├úo e/ou recupera├º├úo de sarjetas     |
+|  8 | Rua Itatiba, 513                                          |         1 |       3 |          120 |          100 | 22110.00 | 2019-11-17 |  1 | Recapeamento de pavimento                   |
+|  8 | Rua Itatiba, 513                                          |         1 |       3 |          120 |          100 | 22110.00 | 2019-11-17 |  2 | Fresagem cont├¡nua de pavimento a frio       |
+|  8 | Rua Itatiba, 513                                          |         1 |       3 |          120 |          100 | 22110.00 | 2019-11-17 |  3 | Constru├º├úo e/ou recupera├º├úo de guias        |
+|  8 | Rua Itatiba, 513                                          |         1 |       3 |          120 |          100 | 22110.00 | 2019-11-17 |  4 | Constru├º├úo e/ou recupera├º├úo de sarjetas     |
+|  9 | Rua Laranjal Paulista, 766                                |         1 |       4 |          100 |          110 | 12344.00 | 2019-11-17 |  1 | Recapeamento de pavimento                   |
+|  9 | Rua Laranjal Paulista, 766                                |         1 |       4 |          100 |          110 | 12344.00 | 2019-11-17 |  2 | Fresagem cont├¡nua de pavimento a frio       |
+|  9 | Rua Laranjal Paulista, 766                                |         1 |       4 |          100 |          110 | 12344.00 | 2019-11-17 |  3 | Constru├º├úo e/ou recupera├º├úo de guias        |
+|  9 | Rua Laranjal Paulista, 766                                |         1 |       4 |          100 |          110 | 12344.00 | 2019-11-17 |  4 | Constru├º├úo e/ou recupera├º├úo de sarjetas     |
+| 10 | Rua Arlindo Lucio da Silva, 125                           |         1 |       3 |          240 |          300 | 44330.00 | 2019-11-17 |  1 | Recapeamento de pavimento                   |
+| 10 | Rua Arlindo Lucio da Silva, 125                           |         1 |       3 |          240 |          300 | 44330.00 | 2019-11-17 |  2 | Fresagem cont├¡nua de pavimento a frio       |
+| 10 | Rua Arlindo Lucio da Silva, 125                           |         1 |       3 |          240 |          300 | 44330.00 | 2019-11-17 |  3 | Constru├º├úo e/ou recupera├º├úo de guias        |
+| 10 | Rua Arlindo Lucio da Silva, 125                           |         1 |       3 |          240 |          300 | 44330.00 | 2019-11-17 |  4 | Constru├º├úo e/ou recupera├º├úo de sarjetas     |
+| 11 | Rua Professora Amalia de Arruda L Martini, 621            |         2 |       1 |          360 |          320 | 15000.00 | 2019-11-17 |  1 | Recapeamento de pavimento                   |
+| 11 | Rua Professora Amalia de Arruda L Martini, 621            |         2 |       1 |          360 |          320 | 15000.00 | 2019-11-17 |  2 | Fresagem cont├¡nua de pavimento a frio       |
+| 11 | Rua Professora Amalia de Arruda L Martini, 621            |         2 |       1 |          360 |          320 | 15000.00 | 2019-11-17 |  3 | Constru├º├úo e/ou recupera├º├úo de guias        |
+| 11 | Rua Professora Amalia de Arruda L Martini, 621            |         2 |       1 |          360 |          320 | 15000.00 | 2019-11-17 |  4 | Constru├º├úo e/ou recupera├º├úo de sarjetas     |
+| 12 | Rua Rodolfo Ribeiro, 156                                  |         2 |       2 |          480 |          200 | 12000.00 | 2019-11-17 |  1 | Recapeamento de pavimento                   |
+| 12 | Rua Rodolfo Ribeiro, 156                                  |         2 |       2 |          480 |          200 | 12000.00 | 2019-11-17 |  2 | Fresagem cont├¡nua de pavimento a frio       |
+| 12 | Rua Rodolfo Ribeiro, 156                                  |         2 |       2 |          480 |          200 | 12000.00 | 2019-11-17 |  3 | Constru├º├úo e/ou recupera├º├úo de guias        |
+| 12 | Rua Rodolfo Ribeiro, 156                                  |         2 |       2 |          480 |          200 | 12000.00 | 2019-11-17 |  4 | Constru├º├úo e/ou recupera├º├úo de sarjetas     |
+| 13 | Avenida Francisco Glicerio, 1058                          |         2 |       3 |          330 |          100 | 35000.00 | 2019-11-17 |  1 | Recapeamento de pavimento                   |
+| 13 | Avenida Francisco Glicerio, 1058                          |         2 |       3 |          330 |          100 | 35000.00 | 2019-11-17 |  2 | Fresagem cont├¡nua de pavimento a frio       |
+| 13 | Avenida Francisco Glicerio, 1058                          |         2 |       3 |          330 |          100 | 35000.00 | 2019-11-17 |  3 | Constru├º├úo e/ou recupera├º├úo de guias        |
+| 13 | Avenida Francisco Glicerio, 1058                          |         2 |       3 |          330 |          100 | 35000.00 | 2019-11-17 |  4 | Constru├º├úo e/ou recupera├º├úo de sarjetas     |
+| 14 | Rua Celso de Barros, 213                                  |         2 |       4 |          300 |          330 | 44342.00 | 2019-11-17 |  1 | Recapeamento de pavimento                   |
+| 14 | Rua Celso de Barros, 213                                  |         2 |       4 |          300 |          330 | 44342.00 | 2019-11-17 |  2 | Fresagem cont├¡nua de pavimento a frio       |
+| 14 | Rua Celso de Barros, 213                                  |         2 |       4 |          300 |          330 | 44342.00 | 2019-11-17 |  3 | Constru├º├úo e/ou recupera├º├úo de guias        |
+| 14 | Rua Celso de Barros, 213                                  |         2 |       4 |          300 |          330 | 44342.00 | 2019-11-17 |  4 | Constru├º├úo e/ou recupera├º├úo de sarjetas     |
+| 15 | Avenida da Saudade, 869                                   |         2 |       4 |          120 |          240 | 11223.00 | 2019-11-17 |  1 | Recapeamento de pavimento                   |
+| 15 | Avenida da Saudade, 869                                   |         2 |       4 |          120 |          240 | 11223.00 | 2019-11-17 |  2 | Fresagem cont├¡nua de pavimento a frio       |
+| 15 | Avenida da Saudade, 869                                   |         2 |       4 |          120 |          240 | 11223.00 | 2019-11-17 |  3 | Constru├º├úo e/ou recupera├º├úo de guias        |
+| 15 | Avenida da Saudade, 869                                   |         2 |       4 |          120 |          240 | 11223.00 | 2019-11-17 |  4 | Constru├º├úo e/ou recupera├º├úo de sarjetas     |
+| 16 | Rua Professora Nadir Leite do Canto, 40                   |         2 |       1 |          100 |          100 | 44330.00 | 2019-11-17 |  1 | Recapeamento de pavimento                   |
+| 16 | Rua Professora Nadir Leite do Canto, 40                   |         2 |       1 |          100 |          100 | 44330.00 | 2019-11-17 |  2 | Fresagem cont├¡nua de pavimento a frio       |
+| 16 | Rua Professora Nadir Leite do Canto, 40                   |         2 |       1 |          100 |          100 | 44330.00 | 2019-11-17 |  3 | Constru├º├úo e/ou recupera├º├úo de guias        |
+| 16 | Rua Professora Nadir Leite do Canto, 40                   |         2 |       1 |          100 |          100 | 44330.00 | 2019-11-17 |  4 | Constru├º├úo e/ou recupera├º├úo de sarjetas     |
+| 17 | Rua Jose Ferreira da Silva, 385                           |         2 |       2 |          240 |          110 | 15000.00 | 2019-11-17 |  1 | Recapeamento de pavimento                   |
+| 17 | Rua Jose Ferreira da Silva, 385                           |         2 |       2 |          240 |          110 | 15000.00 | 2019-11-17 |  2 | Fresagem cont├¡nua de pavimento a frio       |
+| 17 | Rua Jose Ferreira da Silva, 385                           |         2 |       2 |          240 |          110 | 15000.00 | 2019-11-17 |  3 | Constru├º├úo e/ou recupera├º├úo de guias        |
+| 17 | Rua Jose Ferreira da Silva, 385                           |         2 |       2 |          240 |          110 | 15000.00 | 2019-11-17 |  4 | Constru├º├úo e/ou recupera├º├úo de sarjetas     |
+| 18 | Rua Cristovao Bonini, 597                                 |         2 |       3 |          360 |          300 | 12000.00 | 2019-11-17 |  1 | Recapeamento de pavimento                   |
+| 18 | Rua Cristovao Bonini, 597                                 |         2 |       3 |          360 |          300 | 12000.00 | 2019-11-17 |  2 | Fresagem cont├¡nua de pavimento a frio       |
+| 18 | Rua Cristovao Bonini, 597                                 |         2 |       3 |          360 |          300 | 12000.00 | 2019-11-17 |  3 | Constru├º├úo e/ou recupera├º├úo de guias        |
+| 18 | Rua Cristovao Bonini, 597                                 |         2 |       3 |          360 |          300 | 12000.00 | 2019-11-17 |  4 | Constru├º├úo e/ou recupera├º├úo de sarjetas     |
+| 19 | Rua Gentil Ribeiro, 54                                    |         2 |       4 |          480 |          320 | 35000.00 | 2019-11-17 |  1 | Recapeamento de pavimento                   |
+| 19 | Rua Gentil Ribeiro, 54                                    |         2 |       4 |          480 |          320 | 35000.00 | 2019-11-17 |  2 | Fresagem cont├¡nua de pavimento a frio       |
+| 19 | Rua Gentil Ribeiro, 54                                    |         2 |       4 |          480 |          320 | 35000.00 | 2019-11-17 |  3 | Constru├º├úo e/ou recupera├º├úo de guias        |
+| 19 | Rua Gentil Ribeiro, 54                                    |         2 |       4 |          480 |          320 | 35000.00 | 2019-11-17 |  4 | Constru├º├úo e/ou recupera├º├úo de sarjetas     |
+| 20 | Rua Mario Bassani, 206                                    |         2 |       1 |          330 |          200 | 44342.00 | 2019-11-17 |  1 | Recapeamento de pavimento                   |
+| 20 | Rua Mario Bassani, 206                                    |         2 |       1 |          330 |          200 | 44342.00 | 2019-11-17 |  2 | Fresagem cont├¡nua de pavimento a frio       |
+| 20 | Rua Mario Bassani, 206                                    |         2 |       1 |          330 |          200 | 44342.00 | 2019-11-17 |  3 | Constru├º├úo e/ou recupera├º├úo de guias        |
+| 20 | Rua Mario Bassani, 206                                    |         2 |       1 |          330 |          200 | 44342.00 | 2019-11-17 |  4 | Constru├º├úo e/ou recupera├º├úo de sarjetas     |
+| 21 | Rua Virginia Fontes da Silva Padilha, 35                  |         2 |       1 |          300 |          100 | 15000.00 | 2019-11-17 |  1 | Recapeamento de pavimento                   |
+| 21 | Rua Virginia Fontes da Silva Padilha, 35                  |         2 |       1 |          300 |          100 | 15000.00 | 2019-11-17 |  2 | Fresagem cont├¡nua de pavimento a frio       |
+| 21 | Rua Virginia Fontes da Silva Padilha, 35                  |         2 |       1 |          300 |          100 | 15000.00 | 2019-11-17 |  3 | Constru├º├úo e/ou recupera├º├úo de guias        |
+| 21 | Rua Virginia Fontes da Silva Padilha, 35                  |         2 |       1 |          300 |          100 | 15000.00 | 2019-11-17 |  4 | Constru├º├úo e/ou recupera├º├úo de sarjetas     |
+| 22 | Rua Sarah Kubitschek de Oliveira, 87                      |         2 |       2 |          120 |           60 | 12000.00 | 2019-11-17 |  1 | Recapeamento de pavimento                   |
+| 22 | Rua Sarah Kubitschek de Oliveira, 87                      |         2 |       2 |          120 |           60 | 12000.00 | 2019-11-17 |  2 | Fresagem cont├¡nua de pavimento a frio       |
+| 22 | Rua Sarah Kubitschek de Oliveira, 87                      |         2 |       2 |          120 |           60 | 12000.00 | 2019-11-17 |  3 | Constru├º├úo e/ou recupera├º├úo de guias        |
+| 22 | Rua Sarah Kubitschek de Oliveira, 87                      |         2 |       2 |          120 |           60 | 12000.00 | 2019-11-17 |  4 | Constru├º├úo e/ou recupera├º├úo de sarjetas     |
+| 23 | Rua Antonio Luchiari, 499                                 |         2 |       3 |          100 |          100 | 35000.00 | 2019-11-17 |  1 | Recapeamento de pavimento                   |
+| 23 | Rua Antonio Luchiari, 499                                 |         2 |       3 |          100 |          100 | 35000.00 | 2019-11-17 |  2 | Fresagem cont├¡nua de pavimento a frio       |
+| 23 | Rua Antonio Luchiari, 499                                 |         2 |       3 |          100 |          100 | 35000.00 | 2019-11-17 |  3 | Constru├º├úo e/ou recupera├º├úo de guias        |
+| 23 | Rua Antonio Luchiari, 499                                 |         2 |       3 |          100 |          100 | 35000.00 | 2019-11-17 |  4 | Constru├º├úo e/ou recupera├º├úo de sarjetas     |
+| 24 | Rua Antonio Fernando Von Ah, 176                          |         3 |       4 |          240 |          110 | 12500.00 | 2019-11-18 |  1 | Recapeamento de pavimento                   |
+| 24 | Rua Antonio Fernando Von Ah, 176                          |         3 |       4 |          240 |          110 | 12500.00 | 2019-11-18 |  2 | Fresagem cont├¡nua de pavimento a frio       |
+| 24 | Rua Antonio Fernando Von Ah, 176                          |         3 |       4 |          240 |          110 | 12500.00 | 2019-11-18 |  3 | Constru├º├úo e/ou recupera├º├úo de guias        |
+| 24 | Rua Antonio Fernando Von Ah, 176                          |         3 |       4 |          240 |          110 | 12500.00 | 2019-11-18 |  4 | Constru├º├úo e/ou recupera├º├úo de sarjetas     |
+| 25 | Rua Apostal Sotir Tako, 35                                |         3 |       2 |          360 |          300 | 13350.00 | 2019-11-18 |  1 | Recapeamento de pavimento                   |
+| 25 | Rua Apostal Sotir Tako, 35                                |         3 |       2 |          360 |          300 | 13350.00 | 2019-11-18 |  2 | Fresagem cont├¡nua de pavimento a frio       |
+| 25 | Rua Apostal Sotir Tako, 35                                |         3 |       2 |          360 |          300 | 13350.00 | 2019-11-18 |  3 | Constru├º├úo e/ou recupera├º├úo de guias        |
+| 25 | Rua Apostal Sotir Tako, 35                                |         3 |       2 |          360 |          300 | 13350.00 | 2019-11-18 |  4 | Constru├º├úo e/ou recupera├º├úo de sarjetas     |
+| 26 | Rua Rogerio Garcia Sanches, 488                           |         3 |       1 |          480 |          320 | 22110.00 | 2019-11-18 |  1 | Recapeamento de pavimento                   |
+| 26 | Rua Rogerio Garcia Sanches, 488                           |         3 |       1 |          480 |          320 | 22110.00 | 2019-11-18 |  2 | Fresagem cont├¡nua de pavimento a frio       |
+| 26 | Rua Rogerio Garcia Sanches, 488                           |         3 |       1 |          480 |          320 | 22110.00 | 2019-11-18 |  3 | Constru├º├úo e/ou recupera├º├úo de guias        |
+| 26 | Rua Rogerio Garcia Sanches, 488                           |         3 |       1 |          480 |          320 | 22110.00 | 2019-11-18 |  4 | Constru├º├úo e/ou recupera├º├úo de sarjetas     |
+| 27 | Rua Anair Caetano Goncalves, 608                          |         3 |       2 |          330 |          200 | 11000.00 | 2019-11-18 |  1 | Recapeamento de pavimento                   |
+| 27 | Rua Anair Caetano Goncalves, 608                          |         3 |       2 |          330 |          200 | 11000.00 | 2019-11-18 |  2 | Fresagem cont├¡nua de pavimento a frio       |
+| 27 | Rua Anair Caetano Goncalves, 608                          |         3 |       2 |          330 |          200 | 11000.00 | 2019-11-18 |  3 | Constru├º├úo e/ou recupera├º├úo de guias        |
+| 27 | Rua Anair Caetano Goncalves, 608                          |         3 |       2 |          330 |          200 | 11000.00 | 2019-11-18 |  4 | Constru├º├úo e/ou recupera├º├úo de sarjetas     |
+| 28 | Rua Manoella Marcolino da Silva Derigo, 65                |         3 |       3 |          300 |          100 | 21000.00 | 2019-11-18 |  1 | Recapeamento de pavimento                   |
+| 28 | Rua Manoella Marcolino da Silva Derigo, 65                |         3 |       3 |          300 |          100 | 21000.00 | 2019-11-18 |  2 | Fresagem cont├¡nua de pavimento a frio       |
+| 28 | Rua Manoella Marcolino da Silva Derigo, 65                |         3 |       3 |          300 |          100 | 21000.00 | 2019-11-18 |  3 | Constru├º├úo e/ou recupera├º├úo de guias        |
+| 28 | Rua Manoella Marcolino da Silva Derigo, 65                |         3 |       3 |          300 |          100 | 21000.00 | 2019-11-18 |  4 | Constru├º├úo e/ou recupera├º├úo de sarjetas     |
+| 29 | Rua Onze, 609                                             |         3 |       4 |          120 |          100 | 35000.00 | 2019-11-18 |  1 | Recapeamento de pavimento                   |
+| 29 | Rua Onze, 609                                             |         3 |       4 |          120 |          100 | 35000.00 | 2019-11-18 |  2 | Fresagem cont├¡nua de pavimento a frio       |
+| 29 | Rua Onze, 609                                             |         3 |       4 |          120 |          100 | 35000.00 | 2019-11-18 |  3 | Constru├º├úo e/ou recupera├º├úo de guias        |
+| 29 | Rua Onze, 609                                             |         3 |       4 |          120 |          100 | 35000.00 | 2019-11-18 |  4 | Constru├º├úo e/ou recupera├º├úo de sarjetas     |
+| 30 | Rua Cacilda Becker, 0 / Rua Zulmira de Souza Rodrigues, 0 |         3 |       3 |          100 |          110 | 11000.00 | 2019-11-18 |  1 | Recapeamento de pavimento                   |
+| 30 | Rua Cacilda Becker, 0 / Rua Zulmira de Souza Rodrigues, 0 |         3 |       3 |          100 |          110 | 11000.00 | 2019-11-18 |  2 | Fresagem cont├¡nua de pavimento a frio       |
+| 30 | Rua Cacilda Becker, 0 / Rua Zulmira de Souza Rodrigues, 0 |         3 |       3 |          100 |          110 | 11000.00 | 2019-11-18 |  3 | Constru├º├úo e/ou recupera├º├úo de guias        |
+| 30 | Rua Cacilda Becker, 0 / Rua Zulmira de Souza Rodrigues, 0 |         3 |       3 |          100 |          110 | 11000.00 | 2019-11-18 |  4 | Constru├º├úo e/ou recupera├º├úo de sarjetas     |
+| 31 | Rua Urupes, 75                                            |         3 |       1 |          240 |          300 | 10000.00 | 2019-11-18 |  1 | Recapeamento de pavimento                   |
+| 31 | Rua Urupes, 75                                            |         3 |       1 |          240 |          300 | 10000.00 | 2019-11-18 |  2 | Fresagem cont├¡nua de pavimento a frio       |
+| 31 | Rua Urupes, 75                                            |         3 |       1 |          240 |          300 | 10000.00 | 2019-11-18 |  3 | Constru├º├úo e/ou recupera├º├úo de guias        |
+| 31 | Rua Urupes, 75                                            |         3 |       1 |          240 |          300 | 10000.00 | 2019-11-18 |  4 | Constru├º├úo e/ou recupera├º├úo de sarjetas     |
+| 32 | Rua Jose Gomes Oliveira Filho, 173                        |         4 |       2 |          360 |          320 | 43333.00 | 2019-11-18 |  1 | Recapeamento de pavimento                   |
+| 32 | Rua Jose Gomes Oliveira Filho, 173                        |         4 |       2 |          360 |          320 | 43333.00 | 2019-11-18 |  2 | Fresagem cont├¡nua de pavimento a frio       |
+| 32 | Rua Jose Gomes Oliveira Filho, 173                        |         4 |       2 |          360 |          320 | 43333.00 | 2019-11-18 |  3 | Constru├º├úo e/ou recupera├º├úo de guias        |
+| 32 | Rua Jose Gomes Oliveira Filho, 173                        |         4 |       2 |          360 |          320 | 43333.00 | 2019-11-18 |  4 | Constru├º├úo e/ou recupera├º├úo de sarjetas     |
+| 33 | Rua Itaocara, 31                                          |         4 |       3 |          480 |          200 | 44330.00 | 2019-11-18 |  1 | Recapeamento de pavimento                   |
+| 33 | Rua Itaocara, 31                                          |         4 |       3 |          480 |          200 | 44330.00 | 2019-11-18 |  2 | Fresagem cont├¡nua de pavimento a frio       |
+| 33 | Rua Itaocara, 31                                          |         4 |       3 |          480 |          200 | 44330.00 | 2019-11-18 |  3 | Constru├º├úo e/ou recupera├º├úo de guias        |
+| 33 | Rua Itaocara, 31                                          |         4 |       3 |          480 |          200 | 44330.00 | 2019-11-18 |  4 | Constru├º├úo e/ou recupera├º├úo de sarjetas     |
+| 34 | Rua Antonio Baracat, 36                                   |         4 |       4 |          330 |          100 | 15000.00 | 2019-11-18 |  1 | Recapeamento de pavimento                   |
+| 34 | Rua Antonio Baracat, 36                                   |         4 |       4 |          330 |          100 | 15000.00 | 2019-11-18 |  2 | Fresagem cont├¡nua de pavimento a frio       |
+| 34 | Rua Antonio Baracat, 36                                   |         4 |       4 |          330 |          100 | 15000.00 | 2019-11-18 |  3 | Constru├º├úo e/ou recupera├º├úo de guias        |
+| 34 | Rua Antonio Baracat, 36                                   |         4 |       4 |          330 |          100 | 15000.00 | 2019-11-18 |  4 | Constru├º├úo e/ou recupera├º├úo de sarjetas     |
+| 35 | Avenida Marginal, 584                                     |         4 |       4 |          300 |          480 | 12000.00 | 2019-11-18 |  1 | Recapeamento de pavimento                   |
+| 35 | Avenida Marginal, 584                                     |         4 |       4 |          300 |          480 | 12000.00 | 2019-11-18 |  2 | Fresagem cont├¡nua de pavimento a frio       |
+| 35 | Avenida Marginal, 584                                     |         4 |       4 |          300 |          480 | 12000.00 | 2019-11-18 |  3 | Constru├º├úo e/ou recupera├º├úo de guias        |
+| 35 | Avenida Marginal, 584                                     |         4 |       4 |          300 |          480 | 12000.00 | 2019-11-18 |  4 | Constru├º├úo e/ou recupera├º├úo de sarjetas     |
+| 36 | Rua Roberto Antonio Manfredini Filho, 328                 |         4 |       1 |          120 |          100 | 35000.00 | 2019-11-18 |  1 | Recapeamento de pavimento                   |
+| 36 | Rua Roberto Antonio Manfredini Filho, 328                 |         4 |       1 |          120 |          100 | 35000.00 | 2019-11-18 |  2 | Fresagem cont├¡nua de pavimento a frio       |
+| 36 | Rua Roberto Antonio Manfredini Filho, 328                 |         4 |       1 |          120 |          100 | 35000.00 | 2019-11-18 |  3 | Constru├º├úo e/ou recupera├º├úo de guias        |
+| 36 | Rua Roberto Antonio Manfredini Filho, 328                 |         4 |       1 |          120 |          100 | 35000.00 | 2019-11-18 |  4 | Constru├º├úo e/ou recupera├º├úo de sarjetas     |
+| 37 | Rua Professora Carolina de Oliveira, 5                    |         4 |       2 |          100 |          110 | 44342.00 | 2019-11-18 |  1 | Recapeamento de pavimento                   |
+| 37 | Rua Professora Carolina de Oliveira, 5                    |         4 |       2 |          100 |          110 | 44342.00 | 2019-11-18 |  2 | Fresagem cont├¡nua de pavimento a frio       |
+| 37 | Rua Professora Carolina de Oliveira, 5                    |         4 |       2 |          100 |          110 | 44342.00 | 2019-11-18 |  3 | Constru├º├úo e/ou recupera├º├úo de guias        |
+| 37 | Rua Professora Carolina de Oliveira, 5                    |         4 |       2 |          100 |          110 | 44342.00 | 2019-11-18 |  4 | Constru├º├úo e/ou recupera├º├úo de sarjetas     |
+| 38 | Avenida John Boyd Dunlop, 12500                           |         4 |       3 |          240 |          300 | 44330.00 | 2019-11-18 |  1 | Recapeamento de pavimento                   |
+| 38 | Avenida John Boyd Dunlop, 12500                           |         4 |       3 |          240 |          300 | 44330.00 | 2019-11-18 |  2 | Fresagem cont├¡nua de pavimento a frio       |
+| 38 | Avenida John Boyd Dunlop, 12500                           |         4 |       3 |          240 |          300 | 44330.00 | 2019-11-18 |  3 | Constru├º├úo e/ou recupera├º├úo de guias        |
+| 38 | Avenida John Boyd Dunlop, 12500                           |         4 |       3 |          240 |          300 | 44330.00 | 2019-11-18 |  4 | Constru├º├úo e/ou recupera├º├úo de sarjetas     |
+| 39 | Rua Romeu Marinelli, 780                                  |         4 |       1 |          360 |          320 | 15000.00 | 2019-11-18 |  1 | Recapeamento de pavimento                   |
+| 39 | Rua Romeu Marinelli, 780                                  |         4 |       1 |          360 |          320 | 15000.00 | 2019-11-18 |  2 | Fresagem cont├¡nua de pavimento a frio       |
+| 39 | Rua Romeu Marinelli, 780                                  |         4 |       1 |          360 |          320 | 15000.00 | 2019-11-18 |  3 | Constru├º├úo e/ou recupera├º├úo de guias        |
+| 39 | Rua Romeu Marinelli, 780                                  |         4 |       1 |          360 |          320 | 15000.00 | 2019-11-18 |  4 | Constru├º├úo e/ou recupera├º├úo de sarjetas     |
+| 40 | Rua Fernando Padua Castro Mundt, 517                      |         4 |       2 |          480 |          200 | 12000.00 | 2019-11-18 |  1 | Recapeamento de pavimento                   |
+| 40 | Rua Fernando Padua Castro Mundt, 517                      |         4 |       2 |          480 |          200 | 12000.00 | 2019-11-18 |  2 | Fresagem cont├¡nua de pavimento a frio       |
+| 40 | Rua Fernando Padua Castro Mundt, 517                      |         4 |       2 |          480 |          200 | 12000.00 | 2019-11-18 |  3 | Constru├º├úo e/ou recupera├º├úo de guias        |
+| 40 | Rua Fernando Padua Castro Mundt, 517                      |         4 |       2 |          480 |          200 | 12000.00 | 2019-11-18 |  4 | Constru├º├úo e/ou recupera├º├úo de sarjetas     |
+| 41 | Rua Rene Verinaud, 512                                    |         4 |       1 |          330 |          100 | 35000.00 | 2019-11-18 |  1 | Recapeamento de pavimento                   |
+| 41 | Rua Rene Verinaud, 512                                    |         4 |       1 |          330 |          100 | 35000.00 | 2019-11-18 |  2 | Fresagem cont├¡nua de pavimento a frio       |
+| 41 | Rua Rene Verinaud, 512                                    |         4 |       1 |          330 |          100 | 35000.00 | 2019-11-18 |  3 | Constru├º├úo e/ou recupera├º├úo de guias        |
+| 41 | Rua Rene Verinaud, 512                                    |         4 |       1 |          330 |          100 | 35000.00 | 2019-11-18 |  4 | Constru├º├úo e/ou recupera├º├úo de sarjetas     |
+| 42 | Rua Rene Verinaud, 530                                    |         4 |       2 |          300 |          320 | 44342.00 | 2019-11-18 |  1 | Recapeamento de pavimento                   |
+| 42 | Rua Rene Verinaud, 530                                    |         4 |       2 |          300 |          320 | 44342.00 | 2019-11-18 |  2 | Fresagem cont├¡nua de pavimento a frio       |
+| 42 | Rua Rene Verinaud, 530                                    |         4 |       2 |          300 |          320 | 44342.00 | 2019-11-18 |  3 | Constru├º├úo e/ou recupera├º├úo de guias        |
+| 42 | Rua Rene Verinaud, 530                                    |         4 |       2 |          300 |          320 | 44342.00 | 2019-11-18 |  4 | Constru├º├úo e/ou recupera├º├úo de sarjetas     |
+| 43 | Rua Expedicionario Horacio Carlos Teixeira, 25            |         4 |       1 |          120 |          200 | 13350.00 | 2019-11-18 |  1 | Recapeamento de pavimento                   |
+| 43 | Rua Expedicionario Horacio Carlos Teixeira, 25            |         4 |       1 |          120 |          200 | 13350.00 | 2019-11-18 |  2 | Fresagem cont├¡nua de pavimento a frio       |
+| 43 | Rua Expedicionario Horacio Carlos Teixeira, 25            |         4 |       1 |          120 |          200 | 13350.00 | 2019-11-18 |  3 | Constru├º├úo e/ou recupera├º├úo de guias        |
+| 43 | Rua Expedicionario Horacio Carlos Teixeira, 25            |         4 |       1 |          120 |          200 | 13350.00 | 2019-11-18 |  4 | Constru├º├úo e/ou recupera├º├úo de sarjetas     |
+| 44 | Rua Guilherme Fragoso Ferrao, 112                         |         4 |       2 |          100 |          100 | 22110.00 | 2019-11-18 |  1 | Recapeamento de pavimento                   |
+| 44 | Rua Guilherme Fragoso Ferrao, 112                         |         4 |       2 |          100 |          100 | 22110.00 | 2019-11-18 |  2 | Fresagem cont├¡nua de pavimento a frio       |
+| 44 | Rua Guilherme Fragoso Ferrao, 112                         |         4 |       2 |          100 |          100 | 22110.00 | 2019-11-18 |  3 | Constru├º├úo e/ou recupera├º├úo de guias        |
+| 44 | Rua Guilherme Fragoso Ferrao, 112                         |         4 |       2 |          100 |          100 | 22110.00 | 2019-11-18 |  4 | Constru├º├úo e/ou recupera├º├úo de sarjetas     |
+| 45 | Rua Celso Soares Couto, 366                               |         5 |       3 |          240 |          200 | 11000.00 | 2019-11-18 |  1 | Recapeamento de pavimento                   |
+| 45 | Rua Celso Soares Couto, 366                               |         5 |       3 |          240 |          200 | 11000.00 | 2019-11-18 |  2 | Fresagem cont├¡nua de pavimento a frio       |
+| 45 | Rua Celso Soares Couto, 366                               |         5 |       3 |          240 |          200 | 11000.00 | 2019-11-18 |  3 | Constru├º├úo e/ou recupera├º├úo de guias        |
+| 45 | Rua Celso Soares Couto, 366                               |         5 |       3 |          240 |          200 | 11000.00 | 2019-11-18 |  4 | Constru├º├úo e/ou recupera├º├úo de sarjetas     |
+| 46 | Rua General Carlos Coari Iracema Gomes, 202               |         5 |       1 |          360 |          600 | 21000.00 | 2019-11-18 |  1 | Recapeamento de pavimento                   |
+| 46 | Rua General Carlos Coari Iracema Gomes, 202               |         5 |       1 |          360 |          600 | 21000.00 | 2019-11-18 |  2 | Fresagem cont├¡nua de pavimento a frio       |
+| 46 | Rua General Carlos Coari Iracema Gomes, 202               |         5 |       1 |          360 |          600 | 21000.00 | 2019-11-18 |  3 | Constru├º├úo e/ou recupera├º├úo de guias        |
+| 46 | Rua General Carlos Coari Iracema Gomes, 202               |         5 |       1 |          360 |          600 | 21000.00 | 2019-11-18 |  4 | Constru├º├úo e/ou recupera├º├úo de sarjetas     |
+| 47 | Rua Rio Capivari, 72                                      |         5 |       2 |          480 |          600 | 35000.00 | 2019-11-18 |  1 | Recapeamento de pavimento                   |
+| 47 | Rua Rio Capivari, 72                                      |         5 |       2 |          480 |          600 | 35000.00 | 2019-11-18 |  2 | Fresagem cont├¡nua de pavimento a frio       |
+| 47 | Rua Rio Capivari, 72                                      |         5 |       2 |          480 |          600 | 35000.00 | 2019-11-18 |  3 | Constru├º├úo e/ou recupera├º├úo de guias        |
+| 47 | Rua Rio Capivari, 72                                      |         5 |       2 |          480 |          600 | 35000.00 | 2019-11-18 |  4 | Constru├º├úo e/ou recupera├º├úo de sarjetas     |
+| 48 | Rua Expedicionario Horacio Carlos Teixeira, 33            |         5 |       3 |          330 |          100 | 11111.00 | 2019-11-18 |  1 | Recapeamento de pavimento                   |
+| 48 | Rua Expedicionario Horacio Carlos Teixeira, 33            |         5 |       3 |          330 |          100 | 11111.00 | 2019-11-18 |  2 | Fresagem cont├¡nua de pavimento a frio       |
+| 48 | Rua Expedicionario Horacio Carlos Teixeira, 33            |         5 |       3 |          330 |          100 | 11111.00 | 2019-11-18 |  3 | Constru├º├úo e/ou recupera├º├úo de guias        |
+| 48 | Rua Expedicionario Horacio Carlos Teixeira, 33            |         5 |       3 |          330 |          100 | 11111.00 | 2019-11-18 |  4 | Constru├º├úo e/ou recupera├º├úo de sarjetas     |
+| 49 | Rua Expedicionario Horacio CArlos Teixeira, 41            |         5 |       4 |          300 |          110 | 21000.00 | 2019-11-18 |  1 | Recapeamento de pavimento                   |
+| 49 | Rua Expedicionario Horacio CArlos Teixeira, 41            |         5 |       4 |          300 |          110 | 21000.00 | 2019-11-18 |  2 | Fresagem cont├¡nua de pavimento a frio       |
+| 49 | Rua Expedicionario Horacio CArlos Teixeira, 41            |         5 |       4 |          300 |          110 | 21000.00 | 2019-11-18 |  3 | Constru├º├úo e/ou recupera├º├úo de guias        |
+| 49 | Rua Expedicionario Horacio CArlos Teixeira, 41            |         5 |       4 |          300 |          110 | 21000.00 | 2019-11-18 |  4 | Constru├º├úo e/ou recupera├º├úo de sarjetas     |
+| 50 | Rua Osvaldo Gallerani, 494                                |         5 |       4 |          270 |          300 | 20500.00 | 2019-11-18 |  1 | Recapeamento de pavimento                   |
+| 50 | Rua Osvaldo Gallerani, 494                                |         5 |       4 |          270 |          300 | 20500.00 | 2019-11-18 |  2 | Fresagem cont├¡nua de pavimento a frio       |
+| 50 | Rua Osvaldo Gallerani, 494                                |         5 |       4 |          270 |          300 | 20500.00 | 2019-11-18 |  3 | Constru├º├úo e/ou recupera├º├úo de guias        |
+| 50 | Rua Osvaldo Gallerani, 494                                |         5 |       4 |          270 |          300 | 20500.00 | 2019-11-18 |  4 | Constru├º├úo e/ou recupera├º├úo de sarjetas     |
++----+-----------------------------------------------------------+-----------+---------+--------------+--------------+----------+------------+----+---------------------------------------------+
+200 rows in set (0.001 sec)
+
+MariaDB [osmakers]> select * from oss o inner join tipos_de_os t ON o.id_tipo=t.id;
++----+-----------------------------------------------------------+-----------+---------+--------------+--------------+----------+------------+----+---------------------------------------------+
+| id | endereco                                                  | id_bairro | id_tipo | duracao_prev | duracao_real | valor    | data       | id | nome                                        |
++----+-----------------------------------------------------------+-----------+---------+--------------+--------------+----------+------------+----+---------------------------------------------+
+|  1 | Rua Maximiliano Weinlich, 34                              |         1 |       1 |          120 |          100 | 15000.00 | 2019-11-17 |  1 | Recapeamento de pavimento                   |
+|  6 | Rua Mineiros do Tiete, 635                                |         1 |       1 |          330 |          320 | 12500.00 | 2019-11-17 |  1 | Recapeamento de pavimento                   |
+| 11 | Rua Professora Amalia de Arruda L Martini, 621            |         2 |       1 |          360 |          320 | 15000.00 | 2019-11-17 |  1 | Recapeamento de pavimento                   |
+| 16 | Rua Professora Nadir Leite do Canto, 40                   |         2 |       1 |          100 |          100 | 44330.00 | 2019-11-17 |  1 | Recapeamento de pavimento                   |
+| 20 | Rua Mario Bassani, 206                                    |         2 |       1 |          330 |          200 | 44342.00 | 2019-11-17 |  1 | Recapeamento de pavimento                   |
+| 21 | Rua Virginia Fontes da Silva Padilha, 35                  |         2 |       1 |          300 |          100 | 15000.00 | 2019-11-17 |  1 | Recapeamento de pavimento                   |
+| 26 | Rua Rogerio Garcia Sanches, 488                           |         3 |       1 |          480 |          320 | 22110.00 | 2019-11-18 |  1 | Recapeamento de pavimento                   |
+| 31 | Rua Urupes, 75                                            |         3 |       1 |          240 |          300 | 10000.00 | 2019-11-18 |  1 | Recapeamento de pavimento                   |
+| 36 | Rua Roberto Antonio Manfredini Filho, 328                 |         4 |       1 |          120 |          100 | 35000.00 | 2019-11-18 |  1 | Recapeamento de pavimento                   |
+| 39 | Rua Romeu Marinelli, 780                                  |         4 |       1 |          360 |          320 | 15000.00 | 2019-11-18 |  1 | Recapeamento de pavimento                   |
+| 41 | Rua Rene Verinaud, 512                                    |         4 |       1 |          330 |          100 | 35000.00 | 2019-11-18 |  1 | Recapeamento de pavimento                   |
+| 43 | Rua Expedicionario Horacio Carlos Teixeira, 25            |         4 |       1 |          120 |          200 | 13350.00 | 2019-11-18 |  1 | Recapeamento de pavimento                   |
+| 46 | Rua General Carlos Coari Iracema Gomes, 202               |         5 |       1 |          360 |          600 | 21000.00 | 2019-11-18 |  1 | Recapeamento de pavimento                   |
+|  2 | Rua Nilo Rezende Rubim, 35                                |         1 |       2 |          100 |          110 | 12000.00 | 2019-11-17 |  2 | Fresagem cont├¡nua de pavimento a frio       |
+|  5 | Rua Doutor Israel Martins, 45                             |         1 |       2 |          480 |          480 | 10000.00 | 2019-11-17 |  2 | Fresagem cont├¡nua de pavimento a frio       |
+|  7 | Rua General Lauro Sodre, 514                              |         1 |       2 |          300 |          200 | 13350.00 | 2019-11-17 |  2 | Fresagem cont├¡nua de pavimento a frio       |
+| 12 | Rua Rodolfo Ribeiro, 156                                  |         2 |       2 |          480 |          200 | 12000.00 | 2019-11-17 |  2 | Fresagem cont├¡nua de pavimento a frio       |
+| 17 | Rua Jose Ferreira da Silva, 385                           |         2 |       2 |          240 |          110 | 15000.00 | 2019-11-17 |  2 | Fresagem cont├¡nua de pavimento a frio       |
+| 22 | Rua Sarah Kubitschek de Oliveira, 87                      |         2 |       2 |          120 |           60 | 12000.00 | 2019-11-17 |  2 | Fresagem cont├¡nua de pavimento a frio       |
+| 25 | Rua Apostal Sotir Tako, 35                                |         3 |       2 |          360 |          300 | 13350.00 | 2019-11-18 |  2 | Fresagem cont├¡nua de pavimento a frio       |
+| 27 | Rua Anair Caetano Goncalves, 608                          |         3 |       2 |          330 |          200 | 11000.00 | 2019-11-18 |  2 | Fresagem cont├¡nua de pavimento a frio       |
+| 32 | Rua Jose Gomes Oliveira Filho, 173                        |         4 |       2 |          360 |          320 | 43333.00 | 2019-11-18 |  2 | Fresagem cont├¡nua de pavimento a frio       |
+| 37 | Rua Professora Carolina de Oliveira, 5                    |         4 |       2 |          100 |          110 | 44342.00 | 2019-11-18 |  2 | Fresagem cont├¡nua de pavimento a frio       |
+| 40 | Rua Fernando Padua Castro Mundt, 517                      |         4 |       2 |          480 |          200 | 12000.00 | 2019-11-18 |  2 | Fresagem cont├¡nua de pavimento a frio       |
+| 42 | Rua Rene Verinaud, 530                                    |         4 |       2 |          300 |          320 | 44342.00 | 2019-11-18 |  2 | Fresagem cont├¡nua de pavimento a frio       |
+| 44 | Rua Guilherme Fragoso Ferrao, 112                         |         4 |       2 |          100 |          100 | 22110.00 | 2019-11-18 |  2 | Fresagem cont├¡nua de pavimento a frio       |
+| 47 | Rua Rio Capivari, 72                                      |         5 |       2 |          480 |          600 | 35000.00 | 2019-11-18 |  2 | Fresagem cont├¡nua de pavimento a frio       |
+|  3 | Avenida das Amoreiras, 5300                               |         1 |       3 |          240 |          300 | 35000.00 | 2019-11-17 |  3 | Constru├º├úo e/ou recupera├º├úo de guias        |
+|  8 | Rua Itatiba, 513                                          |         1 |       3 |          120 |          100 | 22110.00 | 2019-11-17 |  3 | Constru├º├úo e/ou recupera├º├úo de guias        |
+| 10 | Rua Arlindo Lucio da Silva, 125                           |         1 |       3 |          240 |          300 | 44330.00 | 2019-11-17 |  3 | Constru├º├úo e/ou recupera├º├úo de guias        |
+| 13 | Avenida Francisco Glicerio, 1058                          |         2 |       3 |          330 |          100 | 35000.00 | 2019-11-17 |  3 | Constru├º├úo e/ou recupera├º├úo de guias        |
+| 18 | Rua Cristovao Bonini, 597                                 |         2 |       3 |          360 |          300 | 12000.00 | 2019-11-17 |  3 | Constru├º├úo e/ou recupera├º├úo de guias        |
+| 23 | Rua Antonio Luchiari, 499                                 |         2 |       3 |          100 |          100 | 35000.00 | 2019-11-17 |  3 | Constru├º├úo e/ou recupera├º├úo de guias        |
+| 28 | Rua Manoella Marcolino da Silva Derigo, 65                |         3 |       3 |          300 |          100 | 21000.00 | 2019-11-18 |  3 | Constru├º├úo e/ou recupera├º├úo de guias        |
+| 30 | Rua Cacilda Becker, 0 / Rua Zulmira de Souza Rodrigues, 0 |         3 |       3 |          100 |          110 | 11000.00 | 2019-11-18 |  3 | Constru├º├úo e/ou recupera├º├úo de guias        |
+| 33 | Rua Itaocara, 31                                          |         4 |       3 |          480 |          200 | 44330.00 | 2019-11-18 |  3 | Constru├º├úo e/ou recupera├º├úo de guias        |
+| 38 | Avenida John Boyd Dunlop, 12500                           |         4 |       3 |          240 |          300 | 44330.00 | 2019-11-18 |  3 | Constru├º├úo e/ou recupera├º├úo de guias        |
+| 45 | Rua Celso Soares Couto, 366                               |         5 |       3 |          240 |          200 | 11000.00 | 2019-11-18 |  3 | Constru├º├úo e/ou recupera├º├úo de guias        |
+| 48 | Rua Expedicionario Horacio Carlos Teixeira, 33            |         5 |       3 |          330 |          100 | 11111.00 | 2019-11-18 |  3 | Constru├º├úo e/ou recupera├º├úo de guias        |
+|  4 | Avenida das Amoreiras, 4990                               |         1 |       4 |          360 |          380 | 11000.00 | 2019-11-17 |  4 | Constru├º├úo e/ou recupera├º├úo de sarjetas     |
+|  9 | Rua Laranjal Paulista, 766                                |         1 |       4 |          100 |          110 | 12344.00 | 2019-11-17 |  4 | Constru├º├úo e/ou recupera├º├úo de sarjetas     |
+| 14 | Rua Celso de Barros, 213                                  |         2 |       4 |          300 |          330 | 44342.00 | 2019-11-17 |  4 | Constru├º├úo e/ou recupera├º├úo de sarjetas     |
+| 15 | Avenida da Saudade, 869                                   |         2 |       4 |          120 |          240 | 11223.00 | 2019-11-17 |  4 | Constru├º├úo e/ou recupera├º├úo de sarjetas     |
+| 19 | Rua Gentil Ribeiro, 54                                    |         2 |       4 |          480 |          320 | 35000.00 | 2019-11-17 |  4 | Constru├º├úo e/ou recupera├º├úo de sarjetas     |
+| 24 | Rua Antonio Fernando Von Ah, 176                          |         3 |       4 |          240 |          110 | 12500.00 | 2019-11-18 |  4 | Constru├º├úo e/ou recupera├º├úo de sarjetas     |
+| 29 | Rua Onze, 609                                             |         3 |       4 |          120 |          100 | 35000.00 | 2019-11-18 |  4 | Constru├º├úo e/ou recupera├º├úo de sarjetas     |
+| 34 | Rua Antonio Baracat, 36                                   |         4 |       4 |          330 |          100 | 15000.00 | 2019-11-18 |  4 | Constru├º├úo e/ou recupera├º├úo de sarjetas     |
+| 35 | Avenida Marginal, 584                                     |         4 |       4 |          300 |          480 | 12000.00 | 2019-11-18 |  4 | Constru├º├úo e/ou recupera├º├úo de sarjetas     |
+| 49 | Rua Expedicionario Horacio CArlos Teixeira, 41            |         5 |       4 |          300 |          110 | 21000.00 | 2019-11-18 |  4 | Constru├º├úo e/ou recupera├º├úo de sarjetas     |
+| 50 | Rua Osvaldo Gallerani, 494                                |         5 |       4 |          270 |          300 | 20500.00 | 2019-11-18 |  4 | Constru├º├úo e/ou recupera├º├úo de sarjetas     |
++----+-----------------------------------------------------------+-----------+---------+--------------+--------------+----------+------------+----+---------------------------------------------+
+50 rows in set (0.001 sec)
+
+MariaDB [osmakers]> select o.id,endereco,nome from oss o inner join tipos_de_os t ON o.id_tipo=t.id;
++----+-----------------------------------------------------------+---------------------------------------------+
+| id | endereco                                                  | nome                                        |
++----+-----------------------------------------------------------+---------------------------------------------+
+|  1 | Rua Maximiliano Weinlich, 34                              | Recapeamento de pavimento                   |
+|  6 | Rua Mineiros do Tiete, 635                                | Recapeamento de pavimento                   |
+| 11 | Rua Professora Amalia de Arruda L Martini, 621            | Recapeamento de pavimento                   |
+| 16 | Rua Professora Nadir Leite do Canto, 40                   | Recapeamento de pavimento                   |
+| 20 | Rua Mario Bassani, 206                                    | Recapeamento de pavimento                   |
+| 21 | Rua Virginia Fontes da Silva Padilha, 35                  | Recapeamento de pavimento                   |
+| 26 | Rua Rogerio Garcia Sanches, 488                           | Recapeamento de pavimento                   |
+| 31 | Rua Urupes, 75                                            | Recapeamento de pavimento                   |
+| 36 | Rua Roberto Antonio Manfredini Filho, 328                 | Recapeamento de pavimento                   |
+| 39 | Rua Romeu Marinelli, 780                                  | Recapeamento de pavimento                   |
+| 41 | Rua Rene Verinaud, 512                                    | Recapeamento de pavimento                   |
+| 43 | Rua Expedicionario Horacio Carlos Teixeira, 25            | Recapeamento de pavimento                   |
+| 46 | Rua General Carlos Coari Iracema Gomes, 202               | Recapeamento de pavimento                   |
+|  2 | Rua Nilo Rezende Rubim, 35                                | Fresagem cont├¡nua de pavimento a frio       |
+|  5 | Rua Doutor Israel Martins, 45                             | Fresagem cont├¡nua de pavimento a frio       |
+|  7 | Rua General Lauro Sodre, 514                              | Fresagem cont├¡nua de pavimento a frio       |
+| 12 | Rua Rodolfo Ribeiro, 156                                  | Fresagem cont├¡nua de pavimento a frio       |
+| 17 | Rua Jose Ferreira da Silva, 385                           | Fresagem cont├¡nua de pavimento a frio       |
+| 22 | Rua Sarah Kubitschek de Oliveira, 87                      | Fresagem cont├¡nua de pavimento a frio       |
+| 25 | Rua Apostal Sotir Tako, 35                                | Fresagem cont├¡nua de pavimento a frio       |
+| 27 | Rua Anair Caetano Goncalves, 608                          | Fresagem cont├¡nua de pavimento a frio       |
+| 32 | Rua Jose Gomes Oliveira Filho, 173                        | Fresagem cont├¡nua de pavimento a frio       |
+| 37 | Rua Professora Carolina de Oliveira, 5                    | Fresagem cont├¡nua de pavimento a frio       |
+| 40 | Rua Fernando Padua Castro Mundt, 517                      | Fresagem cont├¡nua de pavimento a frio       |
+| 42 | Rua Rene Verinaud, 530                                    | Fresagem cont├¡nua de pavimento a frio       |
+| 44 | Rua Guilherme Fragoso Ferrao, 112                         | Fresagem cont├¡nua de pavimento a frio       |
+| 47 | Rua Rio Capivari, 72                                      | Fresagem cont├¡nua de pavimento a frio       |
+|  3 | Avenida das Amoreiras, 5300                               | Constru├º├úo e/ou recupera├º├úo de guias        |
+|  8 | Rua Itatiba, 513                                          | Constru├º├úo e/ou recupera├º├úo de guias        |
+| 10 | Rua Arlindo Lucio da Silva, 125                           | Constru├º├úo e/ou recupera├º├úo de guias        |
+| 13 | Avenida Francisco Glicerio, 1058                          | Constru├º├úo e/ou recupera├º├úo de guias        |
+| 18 | Rua Cristovao Bonini, 597                                 | Constru├º├úo e/ou recupera├º├úo de guias        |
+| 23 | Rua Antonio Luchiari, 499                                 | Constru├º├úo e/ou recupera├º├úo de guias        |
+| 28 | Rua Manoella Marcolino da Silva Derigo, 65                | Constru├º├úo e/ou recupera├º├úo de guias        |
+| 30 | Rua Cacilda Becker, 0 / Rua Zulmira de Souza Rodrigues, 0 | Constru├º├úo e/ou recupera├º├úo de guias        |
+| 33 | Rua Itaocara, 31                                          | Constru├º├úo e/ou recupera├º├úo de guias        |
+| 38 | Avenida John Boyd Dunlop, 12500                           | Constru├º├úo e/ou recupera├º├úo de guias        |
+| 45 | Rua Celso Soares Couto, 366                               | Constru├º├úo e/ou recupera├º├úo de guias        |
+| 48 | Rua Expedicionario Horacio Carlos Teixeira, 33            | Constru├º├úo e/ou recupera├º├úo de guias        |
+|  4 | Avenida das Amoreiras, 4990                               | Constru├º├úo e/ou recupera├º├úo de sarjetas     |
+|  9 | Rua Laranjal Paulista, 766                                | Constru├º├úo e/ou recupera├º├úo de sarjetas     |
+| 14 | Rua Celso de Barros, 213                                  | Constru├º├úo e/ou recupera├º├úo de sarjetas     |
+| 15 | Avenida da Saudade, 869                                   | Constru├º├úo e/ou recupera├º├úo de sarjetas     |
+| 19 | Rua Gentil Ribeiro, 54                                    | Constru├º├úo e/ou recupera├º├úo de sarjetas     |
+| 24 | Rua Antonio Fernando Von Ah, 176                          | Constru├º├úo e/ou recupera├º├úo de sarjetas     |
+| 29 | Rua Onze, 609                                             | Constru├º├úo e/ou recupera├º├úo de sarjetas     |
+| 34 | Rua Antonio Baracat, 36                                   | Constru├º├úo e/ou recupera├º├úo de sarjetas     |
+| 35 | Avenida Marginal, 584                                     | Constru├º├úo e/ou recupera├º├úo de sarjetas     |
+| 49 | Rua Expedicionario Horacio CArlos Teixeira, 41            | Constru├º├úo e/ou recupera├º├úo de sarjetas     |
+| 50 | Rua Osvaldo Gallerani, 494                                | Constru├º├úo e/ou recupera├º├úo de sarjetas     |
++----+-----------------------------------------------------------+---------------------------------------------+
+50 rows in set (0.001 sec)
+
+MariaDB [osmakers]> select o.id,endereco,t.nome from oss o inner join tipos_de_os t ON o.id_tipo=t.id;
++----+-----------------------------------------------------------+---------------------------------------------+
+| id | endereco                                                  | nome                                        |
++----+-----------------------------------------------------------+---------------------------------------------+
+|  1 | Rua Maximiliano Weinlich, 34                              | Recapeamento de pavimento                   |
+|  6 | Rua Mineiros do Tiete, 635                                | Recapeamento de pavimento                   |
+| 11 | Rua Professora Amalia de Arruda L Martini, 621            | Recapeamento de pavimento                   |
+| 16 | Rua Professora Nadir Leite do Canto, 40                   | Recapeamento de pavimento                   |
+| 20 | Rua Mario Bassani, 206                                    | Recapeamento de pavimento                   |
+| 21 | Rua Virginia Fontes da Silva Padilha, 35                  | Recapeamento de pavimento                   |
+| 26 | Rua Rogerio Garcia Sanches, 488                           | Recapeamento de pavimento                   |
+| 31 | Rua Urupes, 75                                            | Recapeamento de pavimento                   |
+| 36 | Rua Roberto Antonio Manfredini Filho, 328                 | Recapeamento de pavimento                   |
+| 39 | Rua Romeu Marinelli, 780                                  | Recapeamento de pavimento                   |
+| 41 | Rua Rene Verinaud, 512                                    | Recapeamento de pavimento                   |
+| 43 | Rua Expedicionario Horacio Carlos Teixeira, 25            | Recapeamento de pavimento                   |
+| 46 | Rua General Carlos Coari Iracema Gomes, 202               | Recapeamento de pavimento                   |
+|  2 | Rua Nilo Rezende Rubim, 35                                | Fresagem cont├¡nua de pavimento a frio       |
+|  5 | Rua Doutor Israel Martins, 45                             | Fresagem cont├¡nua de pavimento a frio       |
+|  7 | Rua General Lauro Sodre, 514                              | Fresagem cont├¡nua de pavimento a frio       |
+| 12 | Rua Rodolfo Ribeiro, 156                                  | Fresagem cont├¡nua de pavimento a frio       |
+| 17 | Rua Jose Ferreira da Silva, 385                           | Fresagem cont├¡nua de pavimento a frio       |
+| 22 | Rua Sarah Kubitschek de Oliveira, 87                      | Fresagem cont├¡nua de pavimento a frio       |
+| 25 | Rua Apostal Sotir Tako, 35                                | Fresagem cont├¡nua de pavimento a frio       |
+| 27 | Rua Anair Caetano Goncalves, 608                          | Fresagem cont├¡nua de pavimento a frio       |
+| 32 | Rua Jose Gomes Oliveira Filho, 173                        | Fresagem cont├¡nua de pavimento a frio       |
+| 37 | Rua Professora Carolina de Oliveira, 5                    | Fresagem cont├¡nua de pavimento a frio       |
+| 40 | Rua Fernando Padua Castro Mundt, 517                      | Fresagem cont├¡nua de pavimento a frio       |
+| 42 | Rua Rene Verinaud, 530                                    | Fresagem cont├¡nua de pavimento a frio       |
+| 44 | Rua Guilherme Fragoso Ferrao, 112                         | Fresagem cont├¡nua de pavimento a frio       |
+| 47 | Rua Rio Capivari, 72                                      | Fresagem cont├¡nua de pavimento a frio       |
+|  3 | Avenida das Amoreiras, 5300                               | Constru├º├úo e/ou recupera├º├úo de guias        |
+|  8 | Rua Itatiba, 513                                          | Constru├º├úo e/ou recupera├º├úo de guias        |
+| 10 | Rua Arlindo Lucio da Silva, 125                           | Constru├º├úo e/ou recupera├º├úo de guias        |
+| 13 | Avenida Francisco Glicerio, 1058                          | Constru├º├úo e/ou recupera├º├úo de guias        |
+| 18 | Rua Cristovao Bonini, 597                                 | Constru├º├úo e/ou recupera├º├úo de guias        |
+| 23 | Rua Antonio Luchiari, 499                                 | Constru├º├úo e/ou recupera├º├úo de guias        |
+| 28 | Rua Manoella Marcolino da Silva Derigo, 65                | Constru├º├úo e/ou recupera├º├úo de guias        |
+| 30 | Rua Cacilda Becker, 0 / Rua Zulmira de Souza Rodrigues, 0 | Constru├º├úo e/ou recupera├º├úo de guias        |
+| 33 | Rua Itaocara, 31                                          | Constru├º├úo e/ou recupera├º├úo de guias        |
+| 38 | Avenida John Boyd Dunlop, 12500                           | Constru├º├úo e/ou recupera├º├úo de guias        |
+| 45 | Rua Celso Soares Couto, 366                               | Constru├º├úo e/ou recupera├º├úo de guias        |
+| 48 | Rua Expedicionario Horacio Carlos Teixeira, 33            | Constru├º├úo e/ou recupera├º├úo de guias        |
+|  4 | Avenida das Amoreiras, 4990                               | Constru├º├úo e/ou recupera├º├úo de sarjetas     |
+|  9 | Rua Laranjal Paulista, 766                                | Constru├º├úo e/ou recupera├º├úo de sarjetas     |
+| 14 | Rua Celso de Barros, 213                                  | Constru├º├úo e/ou recupera├º├úo de sarjetas     |
+| 15 | Avenida da Saudade, 869                                   | Constru├º├úo e/ou recupera├º├úo de sarjetas     |
+| 19 | Rua Gentil Ribeiro, 54                                    | Constru├º├úo e/ou recupera├º├úo de sarjetas     |
+| 24 | Rua Antonio Fernando Von Ah, 176                          | Constru├º├úo e/ou recupera├º├úo de sarjetas     |
+| 29 | Rua Onze, 609                                             | Constru├º├úo e/ou recupera├º├úo de sarjetas     |
+| 34 | Rua Antonio Baracat, 36                                   | Constru├º├úo e/ou recupera├º├úo de sarjetas     |
+| 35 | Avenida Marginal, 584                                     | Constru├º├úo e/ou recupera├º├úo de sarjetas     |
+| 49 | Rua Expedicionario Horacio CArlos Teixeira, 41            | Constru├º├úo e/ou recupera├º├úo de sarjetas     |
+| 50 | Rua Osvaldo Gallerani, 494                                | Constru├º├úo e/ou recupera├º├úo de sarjetas     |
++----+-----------------------------------------------------------+---------------------------------------------+
+50 rows in set (0.001 sec)
+
+MariaDB [osmakers]> select o.id,endereco,t.nome,o.id_bairro from oss o inner join tipos_de_os t ON o.id_tipo=t.id;
++----+-----------------------------------------------------------+---------------------------------------------+-----------+
+| id | endereco                                                  | nome                                        | id_bairro |
++----+-----------------------------------------------------------+---------------------------------------------+-----------+
+|  1 | Rua Maximiliano Weinlich, 34                              | Recapeamento de pavimento                   |         1 |
+|  6 | Rua Mineiros do Tiete, 635                                | Recapeamento de pavimento                   |         1 |
+| 11 | Rua Professora Amalia de Arruda L Martini, 621            | Recapeamento de pavimento                   |         2 |
+| 16 | Rua Professora Nadir Leite do Canto, 40                   | Recapeamento de pavimento                   |         2 |
+| 20 | Rua Mario Bassani, 206                                    | Recapeamento de pavimento                   |         2 |
+| 21 | Rua Virginia Fontes da Silva Padilha, 35                  | Recapeamento de pavimento                   |         2 |
+| 26 | Rua Rogerio Garcia Sanches, 488                           | Recapeamento de pavimento                   |         3 |
+| 31 | Rua Urupes, 75                                            | Recapeamento de pavimento                   |         3 |
+| 36 | Rua Roberto Antonio Manfredini Filho, 328                 | Recapeamento de pavimento                   |         4 |
+| 39 | Rua Romeu Marinelli, 780                                  | Recapeamento de pavimento                   |         4 |
+| 41 | Rua Rene Verinaud, 512                                    | Recapeamento de pavimento                   |         4 |
+| 43 | Rua Expedicionario Horacio Carlos Teixeira, 25            | Recapeamento de pavimento                   |         4 |
+| 46 | Rua General Carlos Coari Iracema Gomes, 202               | Recapeamento de pavimento                   |         5 |
+|  2 | Rua Nilo Rezende Rubim, 35                                | Fresagem cont├¡nua de pavimento a frio       |         1 |
+|  5 | Rua Doutor Israel Martins, 45                             | Fresagem cont├¡nua de pavimento a frio       |         1 |
+|  7 | Rua General Lauro Sodre, 514                              | Fresagem cont├¡nua de pavimento a frio       |         1 |
+| 12 | Rua Rodolfo Ribeiro, 156                                  | Fresagem cont├¡nua de pavimento a frio       |         2 |
+| 17 | Rua Jose Ferreira da Silva, 385                           | Fresagem cont├¡nua de pavimento a frio       |         2 |
+| 22 | Rua Sarah Kubitschek de Oliveira, 87                      | Fresagem cont├¡nua de pavimento a frio       |         2 |
+| 25 | Rua Apostal Sotir Tako, 35                                | Fresagem cont├¡nua de pavimento a frio       |         3 |
+| 27 | Rua Anair Caetano Goncalves, 608                          | Fresagem cont├¡nua de pavimento a frio       |         3 |
+| 32 | Rua Jose Gomes Oliveira Filho, 173                        | Fresagem cont├¡nua de pavimento a frio       |         4 |
+| 37 | Rua Professora Carolina de Oliveira, 5                    | Fresagem cont├¡nua de pavimento a frio       |         4 |
+| 40 | Rua Fernando Padua Castro Mundt, 517                      | Fresagem cont├¡nua de pavimento a frio       |         4 |
+| 42 | Rua Rene Verinaud, 530                                    | Fresagem cont├¡nua de pavimento a frio       |         4 |
+| 44 | Rua Guilherme Fragoso Ferrao, 112                         | Fresagem cont├¡nua de pavimento a frio       |         4 |
+| 47 | Rua Rio Capivari, 72                                      | Fresagem cont├¡nua de pavimento a frio       |         5 |
+|  3 | Avenida das Amoreiras, 5300                               | Constru├º├úo e/ou recupera├º├úo de guias        |         1 |
+|  8 | Rua Itatiba, 513                                          | Constru├º├úo e/ou recupera├º├úo de guias        |         1 |
+| 10 | Rua Arlindo Lucio da Silva, 125                           | Constru├º├úo e/ou recupera├º├úo de guias        |         1 |
+| 13 | Avenida Francisco Glicerio, 1058                          | Constru├º├úo e/ou recupera├º├úo de guias        |         2 |
+| 18 | Rua Cristovao Bonini, 597                                 | Constru├º├úo e/ou recupera├º├úo de guias        |         2 |
+| 23 | Rua Antonio Luchiari, 499                                 | Constru├º├úo e/ou recupera├º├úo de guias        |         2 |
+| 28 | Rua Manoella Marcolino da Silva Derigo, 65                | Constru├º├úo e/ou recupera├º├úo de guias        |         3 |
+| 30 | Rua Cacilda Becker, 0 / Rua Zulmira de Souza Rodrigues, 0 | Constru├º├úo e/ou recupera├º├úo de guias        |         3 |
+| 33 | Rua Itaocara, 31                                          | Constru├º├úo e/ou recupera├º├úo de guias        |         4 |
+| 38 | Avenida John Boyd Dunlop, 12500                           | Constru├º├úo e/ou recupera├º├úo de guias        |         4 |
+| 45 | Rua Celso Soares Couto, 366                               | Constru├º├úo e/ou recupera├º├úo de guias        |         5 |
+| 48 | Rua Expedicionario Horacio Carlos Teixeira, 33            | Constru├º├úo e/ou recupera├º├úo de guias        |         5 |
+|  4 | Avenida das Amoreiras, 4990                               | Constru├º├úo e/ou recupera├º├úo de sarjetas     |         1 |
+|  9 | Rua Laranjal Paulista, 766                                | Constru├º├úo e/ou recupera├º├úo de sarjetas     |         1 |
+| 14 | Rua Celso de Barros, 213                                  | Constru├º├úo e/ou recupera├º├úo de sarjetas     |         2 |
+| 15 | Avenida da Saudade, 869                                   | Constru├º├úo e/ou recupera├º├úo de sarjetas     |         2 |
+| 19 | Rua Gentil Ribeiro, 54                                    | Constru├º├úo e/ou recupera├º├úo de sarjetas     |         2 |
+| 24 | Rua Antonio Fernando Von Ah, 176                          | Constru├º├úo e/ou recupera├º├úo de sarjetas     |         3 |
+| 29 | Rua Onze, 609                                             | Constru├º├úo e/ou recupera├º├úo de sarjetas     |         3 |
+| 34 | Rua Antonio Baracat, 36                                   | Constru├º├úo e/ou recupera├º├úo de sarjetas     |         4 |
+| 35 | Avenida Marginal, 584                                     | Constru├º├úo e/ou recupera├º├úo de sarjetas     |         4 |
+| 49 | Rua Expedicionario Horacio CArlos Teixeira, 41            | Constru├º├úo e/ou recupera├º├úo de sarjetas     |         5 |
+| 50 | Rua Osvaldo Gallerani, 494                                | Constru├º├úo e/ou recupera├º├úo de sarjetas     |         5 |
++----+-----------------------------------------------------------+---------------------------------------------+-----------+
+50 rows in set (0.001 sec)
+
+MariaDB [osmakers]> select o.id,endereco,t.nome,b.nome from oss o inner join tipos_de_os t ON o.id_tipo=t.id inner join bairros b ON b.id=oss.bairros_id;
+ERROR 1054 (42S22): Unknown column 'oss.bairros_id' in 'on clause'
+MariaDB [osmakers]> select o.id,endereco,t.nome,b.nome from oss o inner join tipos_de_os t ON o.id_tipo=t.id inner join bairros b ON b.id=o.bairros_id;
+ERROR 1054 (42S22): Unknown column 'o.bairros_id' in 'on clause'
+MariaDB [osmakers]> select o.id,endereco,t.nome,b.nome from oss o inner join tipos_de_os t ON o.id_tipo=t.id inner join bairros b ON b.id=o.bairro_id;
+ERROR 1054 (42S22): Unknown column 'o.bairro_id' in 'on clause'
+MariaDB [osmakers]> select o.id,endereco,t.nome,b.nome from oss o inner join tipos_de_os t ON o.id_tipo=t.id inner join bairros b ON b.id=o.id_bairro;
++----+-----------------------------------------------------------+---------------------------------------------+------------------------+
+| id | endereco                                                  | nome                                        | nome                   |
++----+-----------------------------------------------------------+---------------------------------------------+------------------------+
+|  1 | Rua Maximiliano Weinlich, 34                              | Recapeamento de pavimento                   | AEROPORTO VIRACOPOS    |
+|  6 | Rua Mineiros do Tiete, 635                                | Recapeamento de pavimento                   | AEROPORTO VIRACOPOS    |
+| 11 | Rua Professora Amalia de Arruda L Martini, 621            | Recapeamento de pavimento                   | ALTO DO JD IPAUSSURAMA |
+| 16 | Rua Professora Nadir Leite do Canto, 40                   | Recapeamento de pavimento                   | ALTO DO JD IPAUSSURAMA |
+| 20 | Rua Mario Bassani, 206                                    | Recapeamento de pavimento                   | ALTO DO JD IPAUSSURAMA |
+| 21 | Rua Virginia Fontes da Silva Padilha, 35                  | Recapeamento de pavimento                   | ALTO DO JD IPAUSSURAMA |
+| 26 | Rua Rogerio Garcia Sanches, 488                           | Recapeamento de pavimento                   | ALTO JD IPAUSSURAMA    |
+| 31 | Rua Urupes, 75                                            | Recapeamento de pavimento                   | ALTO JD IPAUSSURAMA    |
+| 36 | Rua Roberto Antonio Manfredini Filho, 328                 | Recapeamento de pavimento                   | BACURI                 |
+| 39 | Rua Romeu Marinelli, 780                                  | Recapeamento de pavimento                   | BACURI                 |
+| 41 | Rua Rene Verinaud, 512                                    | Recapeamento de pavimento                   | BACURI                 |
+| 43 | Rua Expedicionario Horacio Carlos Teixeira, 25            | Recapeamento de pavimento                   | BACURI                 |
+| 46 | Rua General Carlos Coari Iracema Gomes, 202               | Recapeamento de pavimento                   | BOSQUE                 |
+|  2 | Rua Nilo Rezende Rubim, 35                                | Fresagem cont├¡nua de pavimento a frio       | AEROPORTO VIRACOPOS    |
+|  5 | Rua Doutor Israel Martins, 45                             | Fresagem cont├¡nua de pavimento a frio       | AEROPORTO VIRACOPOS    |
+|  7 | Rua General Lauro Sodre, 514                              | Fresagem cont├¡nua de pavimento a frio       | AEROPORTO VIRACOPOS    |
+| 12 | Rua Rodolfo Ribeiro, 156                                  | Fresagem cont├¡nua de pavimento a frio       | ALTO DO JD IPAUSSURAMA |
+| 17 | Rua Jose Ferreira da Silva, 385                           | Fresagem cont├¡nua de pavimento a frio       | ALTO DO JD IPAUSSURAMA |
+| 22 | Rua Sarah Kubitschek de Oliveira, 87                      | Fresagem cont├¡nua de pavimento a frio       | ALTO DO JD IPAUSSURAMA |
+| 25 | Rua Apostal Sotir Tako, 35                                | Fresagem cont├¡nua de pavimento a frio       | ALTO JD IPAUSSURAMA    |
+| 27 | Rua Anair Caetano Goncalves, 608                          | Fresagem cont├¡nua de pavimento a frio       | ALTO JD IPAUSSURAMA    |
+| 32 | Rua Jose Gomes Oliveira Filho, 173                        | Fresagem cont├¡nua de pavimento a frio       | BACURI                 |
+| 37 | Rua Professora Carolina de Oliveira, 5                    | Fresagem cont├¡nua de pavimento a frio       | BACURI                 |
+| 40 | Rua Fernando Padua Castro Mundt, 517                      | Fresagem cont├¡nua de pavimento a frio       | BACURI                 |
+| 42 | Rua Rene Verinaud, 530                                    | Fresagem cont├¡nua de pavimento a frio       | BACURI                 |
+| 44 | Rua Guilherme Fragoso Ferrao, 112                         | Fresagem cont├¡nua de pavimento a frio       | BACURI                 |
+| 47 | Rua Rio Capivari, 72                                      | Fresagem cont├¡nua de pavimento a frio       | BOSQUE                 |
+|  3 | Avenida das Amoreiras, 5300                               | Constru├º├úo e/ou recupera├º├úo de guias        | AEROPORTO VIRACOPOS    |
+|  8 | Rua Itatiba, 513                                          | Constru├º├úo e/ou recupera├º├úo de guias        | AEROPORTO VIRACOPOS    |
+| 10 | Rua Arlindo Lucio da Silva, 125                           | Constru├º├úo e/ou recupera├º├úo de guias        | AEROPORTO VIRACOPOS    |
+| 13 | Avenida Francisco Glicerio, 1058                          | Constru├º├úo e/ou recupera├º├úo de guias        | ALTO DO JD IPAUSSURAMA |
+| 18 | Rua Cristovao Bonini, 597                                 | Constru├º├úo e/ou recupera├º├úo de guias        | ALTO DO JD IPAUSSURAMA |
+| 23 | Rua Antonio Luchiari, 499                                 | Constru├º├úo e/ou recupera├º├úo de guias        | ALTO DO JD IPAUSSURAMA |
+| 28 | Rua Manoella Marcolino da Silva Derigo, 65                | Constru├º├úo e/ou recupera├º├úo de guias        | ALTO JD IPAUSSURAMA    |
+| 30 | Rua Cacilda Becker, 0 / Rua Zulmira de Souza Rodrigues, 0 | Constru├º├úo e/ou recupera├º├úo de guias        | ALTO JD IPAUSSURAMA    |
+| 33 | Rua Itaocara, 31                                          | Constru├º├úo e/ou recupera├º├úo de guias        | BACURI                 |
+| 38 | Avenida John Boyd Dunlop, 12500                           | Constru├º├úo e/ou recupera├º├úo de guias        | BACURI                 |
+| 45 | Rua Celso Soares Couto, 366                               | Constru├º├úo e/ou recupera├º├úo de guias        | BOSQUE                 |
+| 48 | Rua Expedicionario Horacio Carlos Teixeira, 33            | Constru├º├úo e/ou recupera├º├úo de guias        | BOSQUE                 |
+|  4 | Avenida das Amoreiras, 4990                               | Constru├º├úo e/ou recupera├º├úo de sarjetas     | AEROPORTO VIRACOPOS    |
+|  9 | Rua Laranjal Paulista, 766                                | Constru├º├úo e/ou recupera├º├úo de sarjetas     | AEROPORTO VIRACOPOS    |
+| 14 | Rua Celso de Barros, 213                                  | Constru├º├úo e/ou recupera├º├úo de sarjetas     | ALTO DO JD IPAUSSURAMA |
+| 15 | Avenida da Saudade, 869                                   | Constru├º├úo e/ou recupera├º├úo de sarjetas     | ALTO DO JD IPAUSSURAMA |
+| 19 | Rua Gentil Ribeiro, 54                                    | Constru├º├úo e/ou recupera├º├úo de sarjetas     | ALTO DO JD IPAUSSURAMA |
+| 24 | Rua Antonio Fernando Von Ah, 176                          | Constru├º├úo e/ou recupera├º├úo de sarjetas     | ALTO JD IPAUSSURAMA    |
+| 29 | Rua Onze, 609                                             | Constru├º├úo e/ou recupera├º├úo de sarjetas     | ALTO JD IPAUSSURAMA    |
+| 34 | Rua Antonio Baracat, 36                                   | Constru├º├úo e/ou recupera├º├úo de sarjetas     | BACURI                 |
+| 35 | Avenida Marginal, 584                                     | Constru├º├úo e/ou recupera├º├úo de sarjetas     | BACURI                 |
+| 49 | Rua Expedicionario Horacio CArlos Teixeira, 41            | Constru├º├úo e/ou recupera├º├úo de sarjetas     | BOSQUE                 |
+| 50 | Rua Osvaldo Gallerani, 494                                | Constru├º├úo e/ou recupera├º├úo de sarjetas     | BOSQUE                 |
++----+-----------------------------------------------------------+---------------------------------------------+------------------------+
+50 rows in set (0.000 sec)
+
+MariaDB [osmakers]> select o.id, o endereco, t.nome as tipo, b
+    -> where o.id_bairro=1;
+ERROR 1109 (42S02): Unknown table 'o' in field list
+MariaDB [osmakers]> select o.id, o endereco, t.nome as tipo, b.nome as bairro, date_format(o.data, '%d/%m/%Y') as data from oss o inner join tipos_de_os t ON o.id_tipo=t.id inner join bairros b ON b.id=o.id_bairro where data='2019-11-17' order by t.nome;
+ERROR 1054 (42S22): Unknown column 'o' in 'field list'
+MariaDB [osmakers]> select id_equipe, o.nome count(*) from oss where;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'count(*) from oss where' at line 1
+MariaDB [osmakers]> select * from oss_equipes;
++-------+-----------+
+| id_os | id_equipe |
++-------+-----------+
+|     1 |         1 |
+|     1 |         2 |
+|     2 |         3 |
+|     3 |         4 |
+|     4 |         1 |
+|     5 |         2 |
+|     5 |         3 |
+|     5 |         4 |
+|     6 |         1 |
+|     7 |         2 |
+|     8 |         3 |
+|     9 |         4 |
+|    10 |         1 |
+|    11 |         2 |
+|    11 |         3 |
+|    11 |         4 |
+|    12 |         1 |
+|    13 |         2 |
+|    14 |         3 |
+|    15 |         4 |
+|    16 |         1 |
+|    16 |         2 |
+|    17 |         3 |
+|    18 |         4 |
+|    19 |         1 |
+|    20 |         1 |
+|    21 |         2 |
+|    22 |         3 |
+|    23 |         4 |
+|    24 |         1 |
+|    25 |         2 |
+|    26 |         3 |
+|    27 |         4 |
+|    28 |         1 |
+|    29 |         2 |
+|    30 |         3 |
+|    30 |         4 |
+|    31 |         1 |
+|    32 |         2 |
+|    33 |         3 |
+|    34 |         4 |
+|    35 |         1 |
+|    36 |         2 |
+|    37 |         3 |
+|    38 |         4 |
+|    39 |         1 |
+|    40 |         2 |
++-------+-----------+
+47 rows in set (0.001 sec)
+
+MariaDB [osmakers]> select * from oss_equipes where id_equipe=1;
++-------+-----------+
+| id_os | id_equipe |
++-------+-----------+
+|     1 |         1 |
+|     4 |         1 |
+|     6 |         1 |
+|    10 |         1 |
+|    12 |         1 |
+|    16 |         1 |
+|    19 |         1 |
+|    20 |         1 |
+|    24 |         1 |
+|    28 |         1 |
+|    31 |         1 |
+|    35 |         1 |
+|    39 |         1 |
++-------+-----------+
+13 rows in set (0.001 sec)
+
+MariaDB [osmakers]> select * from equipes e inner join oss_equipes oe ON e.id=oe.id_equipe;
++----+----------+-------+-----------+
+| id | nome     | id_os | id_equipe |
++----+----------+-------+-----------+
+|  1 | Equipe A |     1 |         1 |
+|  1 | Equipe A |     4 |         1 |
+|  1 | Equipe A |     6 |         1 |
+|  1 | Equipe A |    10 |         1 |
+|  1 | Equipe A |    12 |         1 |
+|  1 | Equipe A |    16 |         1 |
+|  1 | Equipe A |    19 |         1 |
+|  1 | Equipe A |    20 |         1 |
+|  1 | Equipe A |    24 |         1 |
+|  1 | Equipe A |    28 |         1 |
+|  1 | Equipe A |    31 |         1 |
+|  1 | Equipe A |    35 |         1 |
+|  1 | Equipe A |    39 |         1 |
+|  2 | Equipe B |     1 |         2 |
+|  2 | Equipe B |     5 |         2 |
+|  2 | Equipe B |     7 |         2 |
+|  2 | Equipe B |    11 |         2 |
+|  2 | Equipe B |    13 |         2 |
+|  2 | Equipe B |    16 |         2 |
+|  2 | Equipe B |    21 |         2 |
+|  2 | Equipe B |    25 |         2 |
+|  2 | Equipe B |    29 |         2 |
+|  2 | Equipe B |    32 |         2 |
+|  2 | Equipe B |    36 |         2 |
+|  2 | Equipe B |    40 |         2 |
+|  3 | Equipe C |     2 |         3 |
+|  3 | Equipe C |     5 |         3 |
+|  3 | Equipe C |     8 |         3 |
+|  3 | Equipe C |    11 |         3 |
+|  3 | Equipe C |    14 |         3 |
+|  3 | Equipe C |    17 |         3 |
+|  3 | Equipe C |    22 |         3 |
+|  3 | Equipe C |    26 |         3 |
+|  3 | Equipe C |    30 |         3 |
+|  3 | Equipe C |    33 |         3 |
+|  3 | Equipe C |    37 |         3 |
+|  4 | Equipe D |     3 |         4 |
+|  4 | Equipe D |     5 |         4 |
+|  4 | Equipe D |     9 |         4 |
+|  4 | Equipe D |    11 |         4 |
+|  4 | Equipe D |    15 |         4 |
+|  4 | Equipe D |    18 |         4 |
+|  4 | Equipe D |    23 |         4 |
+|  4 | Equipe D |    27 |         4 |
+|  4 | Equipe D |    30 |         4 |
+|  4 | Equipe D |    34 |         4 |
+|  4 | Equipe D |    38 |         4 |
++----+----------+-------+-----------+
+47 rows in set (0.001 sec)
+
+MariaDB [osmakers]> select e.id,e.nome, count(*) from equipes e inner join oss_equipes oe ON e.id=oe.id_equipe;
++----+----------+----------+
+| id | nome     | count(*) |
++----+----------+----------+
+|  1 | Equipe A |       47 |
++----+----------+----------+
+1 row in set (0.001 sec)
+
+MariaDB [osmakers]> select e.id,e.nome, count(*) from equipes e inner join oss_equipes oe ON e.id=oe.id_equipe group by e.id,e.nome;
++----+----------+----------+
+| id | nome     | count(*) |
++----+----------+----------+
+|  1 | Equipe A |       13 |
+|  2 | Equipe B |       12 |
+|  3 | Equipe C |       11 |
+|  4 | Equipe D |       11 |
++----+----------+----------+
+4 rows in set (0.001 sec)
+
+MariaDB [osmakers]> select e.id,e.nome, count(*) N_OS from equipes e inner join oss_equipes oe ON e.id=oe.id_equipe group by e.id,e.nome;
++----+----------+------+
+| id | nome     | N_OS |
++----+----------+------+
+|  1 | Equipe A |   13 |
+|  2 | Equipe B |   12 |
+|  3 | Equipe C |   11 |
+|  4 | Equipe D |   11 |
++----+----------+------+
+4 rows in set (0.001 sec)
+
+MariaDB [osmakers]> select e.id,e.nome, count(*) N_OS from equipes e left join oss_equipes oe ON e.id=oe.id_equipe group by e.id,e.nome;
++----+----------+------+
+| id | nome     | N_OS |
++----+----------+------+
+|  1 | Equipe A |   13 |
+|  2 | Equipe B |   12 |
+|  3 | Equipe C |   11 |
+|  4 | Equipe D |   11 |
+|  5 | Equipe E |    1 |
++----+----------+------+
+5 rows in set (0.001 sec)
+
+MariaDB [osmakers]> select e.id,e.nome, count(id_os) AS N_OS from equipes e left join oss_equipes oe ON e.id=oe.id_equipe group by e.id,e.nome;
++----+----------+------+
+| id | nome     | N_OS |
++----+----------+------+
+|  1 | Equipe A |   13 |
+|  2 | Equipe B |   12 |
+|  3 | Equipe C |   11 |
+|  4 | Equipe D |   11 |
+|  5 | Equipe E |    0 |
++----+----------+------+
+5 rows in set (0.001 sec)
+
+MariaDB [osmakers]>
